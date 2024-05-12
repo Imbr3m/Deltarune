@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "center 300vh",
       end: "400vh 300vh",
       scrub: 1,
-      markers: true,
     }
   })
     // zoom
