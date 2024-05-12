@@ -1,0 +1,175 @@
+/* Defults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* hides the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* logo css */
+.logo {
+  position: fixed;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+}
+/* container div */
+.container {
+  width: 100%;
+  height: 100%;
+}
+/* castle css */
+.castle {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 125vh;
+  z-index: 1;
+  overflow: hidden;
+}
+.door {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 125vh;
+  overflow: hidden;
+  transform: translate(-50%, -100.3% );
+  display: flex;
+}
+.laser {
+  box-shadow: 0 60px 80px 0px black inset;
+  position: absolute;
+  left: 50%;
+  width: 15%;
+  height: 50vh;
+  overflow: hidden;
+  transform: translate(-50%, -262.3% );
+  z-index: 1;
+}
+.gradient {
+  position: fixed;
+  left: 50%;
+  width: 100%;
+  height: 10vh;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 0, 0));
+}
+/* Stars */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  overflow: hidden;
+}
+/* individual stars*/
+.star1 {
+    height: 40px;
+    width: 40px;
+  transform: translate(13vh, 38vh );
+}
+.star2 {
+    height: 30px;
+    width: 30px;
+  transform: translate(20vh, 23vh );
+}
+.star3 {
+    height: 30px;
+    width: 30px;
+  transform: translate(0vh, 19vh );
+}
+.star4 {
+    height: 30px;
+    width: 30px;
+  transform: translate(30vh, 15vh );
+}
+.star5 {
+    height: 30px;
+    width: 30px;
+  transform: translate(45vh, 10vh );
+}
+.star6 {
+    height: 30px;
+    width: 30px;
+  transform: translate(-20vh, 57vh );
+}
+.star7 {
+    height: 30px;
+    width: 30px;
+  transform: translate(90vh, 14vh );
+}
+.star8 {
+    height: 30px;
+    width: 30px;
+  transform: translate(100vh, 10vh );
+}
+.star9 {
+    height: 30px;
+    width: 30px;
+  transform: translate(120vh, 25vh );
+}
+.star10 {
+    height: 30px;
+    width: 30px;
+  transform: translate(100vh, 16vh );
+}
+.star11 {
+    height: 30px;
+    width: 30px;
+  transform: translate(119vh, 40vh );
+}
+.star12 {
+    height: 30px;
+    width: 30px;
+  transform: translate(114vh, 16vh );
+}
+.star {
+    height: 30px;
+    width: 30px;
+  transform: translate(90vh, 14vh );
+}
+
+/* Castle CSS End */
+
+
+
+.whitespace {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background: url("Assets/village.gif");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 60px 80px 0px black inset;
+}
+
+
+
+
+
+
+
+
+p {
+  color: white;
+  font-size: 20px;
+}
