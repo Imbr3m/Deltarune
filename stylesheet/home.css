@@ -1,11 +1,21 @@
+
+:root {
+  --main-color: #000000;
+  --secondary-color: #ffffff;
+  --font-size: 16px;
+}
+
+
 /* Defults */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: deltarune;
 }
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -17,6 +27,54 @@ img {
   display: none;
 }
 
+/* .ttf font import */
+@font-face {
+  font-family: deltarune;
+  src: url(Assets/Fonts/undertale-deltarune-text-font-extended.ttf);
+}
+
+@font-face {
+  font-family: deltarune2;
+  src: url(Assets/Fonts/deltarune.ttf);
+}
+
+
+
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 10vh;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(0,0,0,0) 100%);z-index: 5;
+  display: flex; /* Used Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  display: flex; 
+  justify-content: space-between;
+}
+
+nav ul li {
+  font-size: 1.5rem;
+  margin: 0px 10px;
+  color: black;
+}
+nav ul li span{
+  background-color: red;
+  width: 10vh;
+}
+
+
+
+
 /* logo css */
 .logo {
   position: fixed;
@@ -24,7 +82,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 2;
+  z-index: 5;
 }
 /* container div */
 .container {
@@ -46,7 +104,7 @@ img {
   width: 100%;
   height: 125vh;
   overflow: hidden;
-  transform: translate(-50%, -100.3% );
+  transform: translate(-50%, -101.1% );
   display: flex;
 }
 .laser {
@@ -93,8 +151,8 @@ img {
   transform: translate(0vh, 19vh );
 }
 .star4 {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   transform: translate(30vh, 15vh );
 }
 .star5 {
@@ -103,8 +161,8 @@ img {
   transform: translate(45vh, 10vh );
 }
 .star6 {
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 40px;
   transform: translate(-20vh, 57vh );
 }
 .star7 {
@@ -118,8 +176,8 @@ img {
   transform: translate(100vh, 10vh );
 }
 .star9 {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   transform: translate(120vh, 25vh );
 }
 .star10 {
@@ -128,13 +186,13 @@ img {
   transform: translate(100vh, 16vh );
 }
 .star11 {
-    height: 30px;
-    width: 30px;
+    height: 10px;
+    width: 10px;
   transform: translate(119vh, 40vh );
 }
 .star12 {
-    height: 30px;
-    width: 30px;
+  height: 60px;
+  width: 40px;
   transform: translate(114vh, 16vh );
 }
 .star {
@@ -142,7 +200,6 @@ img {
     width: 30px;
   transform: translate(90vh, 14vh );
 }
-
 /* Castle CSS End */
 
 
@@ -153,25 +210,103 @@ img {
   background-color: black;
 }
 
+/* Landing page */
 .landing-page {
   width: 100%;
   height: 100vh;
-  background: url("Assets/village.gif");
+  background: url("Assets/BG/village.gif");
   background-size: cover;
   background-position: center;
   box-shadow: 0 60px 80px 0px black inset;
-  display: flex;
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.video-title {
+  color: white;
+}
+/* Video CSS */
+.video-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#trailer {
+  width: 65%;
+}
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* Video CSS END */
+
+
+/* About section */
+.about {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+.text p {
+  font-size: 1.6rem;
+  width: 80%;
+}
+.img-container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-container img {
+  height: 100%;
+  width: auto;
+}
+
+/* kris-susie running */
+.run {
+  width: auto;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.run img {
+  height: 100%;
+  width: auto;
 }
 
 
 
 
 
-
-
-
 p {
+  
   color: white;
   font-size: 20px;
 }

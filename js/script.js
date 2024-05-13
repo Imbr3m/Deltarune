@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
 
+  gsap.to(".logo", {
+    y: "-50vh",
+    scale: 0.34,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".castle",
+      start: "top 500vh",
+      end: "100vh 400vh",
+      scrub: 1,
+    }
+  })
+
 
   // CASTLE ANIMATION
   gsap.to(".castle", {
@@ -187,8 +199,9 @@ document.addEventListener("DOMContentLoaded", function() {
     yoyo: true,
   });
   gsap.from(".stars", {
+    opacity: 0,
     y: "-25vh",
-    scale: 5,
+    scale: 10,
     delay: 1,
     scrollTrigger: {
       trigger: ".logo",
@@ -216,6 +229,106 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+  // Video transition
+  gsap.from(".video-title", {
+    opacity: 0,
+    y: "15vh",
+    scrollTrigger: {
+      trigger: ".landing-page",
+      start: "top 100vh",
+      end: "top 100vh",
+      scrub: 1,
+      markers: true,
+    }
+  })
+  
+  gsap.from(".video-container", {
+    opacity: 0,
+    y: "15vh",
+    scrollTrigger: {
+      trigger: ".landing-page",
+      start: "top 65vh",
+      end: "top 65vh",
+      scrub: 3,
+    }
+  })
+
+  gsap.to(".landing-page", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".landing-page",
+      start: "400vh top",
+      end: "500vh top",
+      scrub: 1,
+      
+    }
+  })
+  
+
+  gsap.fromTo( ".about", {
+    backgroundColor: gsap.getProperty("html", "--main-color")
+  }, {
+    scrollTrigger: {
+      trigger: ".landing-page",
+      start: "400vh top",
+      end: "500vh top",
+      scrub: 1,
+    },
+    backgroundColor: "#111111",
+  });
+
+  
+  gsap.from(".about .img-container", {
+    opacity: 0,
+    x: 50,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "150vh center",
+      end: "bottom center",
+      scrub: 1,
+      
+      
+    }
+  })
+  gsap.from(".about .text", {
+    opacity: 0,
+    x: "-50",
+    scrollTrigger: {
+      trigger: ".about",
+      start: "200vh center",
+      end: "300vh center",
+      scrub: 1,      
+    }
+  })
+  gsap.to(".about", {
+    opacity: 0,
+    x: 50,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "550vh center",
+      end: "800vh center",
+      scrub: 1,
+    }
+  })
+
+
+  // kris susie running
+  gsap.set(".run", {
+    x: "-200vh",
+    y: "-60vh",
+    rotation: 20,
+  })
+  gsap.to(".run", {
+    x: "200vh",
+    y: "15vh",
+    duration: 5,
+
+    scrollTrigger: {
+      trigger: ".run",
+      start: "500vh center",
+      end: "500vh center", 
+    }
+  })
 
 
 });
