@@ -257,6 +257,9 @@ nav ul li span{
 
 /* About section */
 .about {
+  /* background: url("Assets/BG/battle-bg.gif");
+  background-size: cover;
+  background-position: top; */
   height: 70vh;
   width: 100%;
   display: flex;
@@ -264,7 +267,13 @@ nav ul li span{
   justify-content: space-evenly;
   align-items: center;
 }
-.text {
+.about .square {
+  position: absolute;
+  height: 5vh;
+  width: 5vh;
+  border: #ffffff 2px solid;
+}
+.about .text {
   color: white;
   display: flex;
   justify-content: center;
@@ -272,7 +281,7 @@ nav ul li span{
   width: 70%;
   height: 100%;
 }
-.text p {
+.about .text p {
   font-size: 1.6rem;
   width: 80%;
 }
@@ -302,6 +311,10 @@ nav ul li span{
 }
 
 
+.animation-container {
+  color: white;
+  background-color: red;
+}
 
 
 

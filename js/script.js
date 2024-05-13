@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "top 100vh",
       end: "top 100vh",
       scrub: 1,
-      markers: true,
+      
     }
   })
   
@@ -247,8 +247,8 @@ document.addEventListener("DOMContentLoaded", function() {
     y: "15vh",
     scrollTrigger: {
       trigger: ".landing-page",
-      start: "top 65vh",
-      end: "top 65vh",
+      start: "top 150vh",
+      end: "top 150vh",
       scrub: 3,
     }
   })
@@ -264,17 +264,61 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
   
+  // ABOUT SQUARE
+  gsap.set(".about .square", {
+    x: "45vh",
+  })
+  gsap.from(".about .square", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "150vh center",
+      end: "200vh center",
+      scrub: 1,
+    }
+  })
+  gsap.from(".about .square", {
+    x: "-200vh",
+    rotate: "-180",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "150vh center",
+      end: "150vh center",
+      
+    }
+  })
+  gsap.to(".about .square", {
+    rotate: 1000,
+    scrollTrigger: {
+      trigger: ".landing-page",
+      start: "400vh top",
+      end: "5500vh top",
+      scrub: 1,
+      
+    }
+  })
+  gsap.to(".about .square", {
+    scale: 10,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "center center",
+      end: "center center",
+      markers: true,
+      
+    }
+  })
 
-  gsap.fromTo( ".about", {
-    backgroundColor: gsap.getProperty("html", "--main-color")
-  }, {
+// about
+  gsap.to( ".about", {
+    background: "linear-gradient(180deg, rgba(32,32,32,0) 0%, rgba(60,60,60,1) 30%, rgba(60,60,60,1) 70%, rgba(255,255,255,0) 100%)",
     scrollTrigger: {
       trigger: ".landing-page",
       start: "400vh top",
       end: "500vh top",
       scrub: 1,
     },
-    backgroundColor: "#111111",
+    
   });
 
   
@@ -283,8 +327,8 @@ document.addEventListener("DOMContentLoaded", function() {
     x: 50,
     scrollTrigger: {
       trigger: ".about",
-      start: "150vh center",
-      end: "bottom center",
+      start: "100vh center",
+      end: "200vh center",
       scrub: 1,
       
       
@@ -295,9 +339,10 @@ document.addEventListener("DOMContentLoaded", function() {
     x: "-50",
     scrollTrigger: {
       trigger: ".about",
-      start: "200vh center",
-      end: "300vh center",
-      scrub: 1,      
+      start: "150vh center",
+      end: "200vh center",
+      scrub: 1,   
+ 
     }
   })
   gsap.to(".about", {
@@ -321,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.to(".run", {
     x: "200vh",
     y: "15vh",
-    duration: 5,
+    duration: 6.5 ,
 
     scrollTrigger: {
       trigger: ".run",
