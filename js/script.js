@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   gsap.from(".about .square", {
     x: "-200vh",
-    rotate: "-180",
+    rotate: "-720",
     duration: 2,
     scrollTrigger: {
       trigger: ".about",
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
       trigger: ".about",
       start: "center center",
       end: "center center",
-      markers: true,
+      
       
     }
   })
@@ -320,8 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     
   });
-
-  
+  // about image jojo
   gsap.from(".about .img-container", {
     opacity: 0,
     x: 50,
@@ -334,6 +333,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
     }
   })
+  // text on the left 
   gsap.from(".about .text", {
     opacity: 0,
     x: "-50",
@@ -345,36 +345,321 @@ document.addEventListener("DOMContentLoaded", function() {
  
     }
   })
-  gsap.to(".about", {
-    opacity: 0,
-    x: 50,
-    scrollTrigger: {
-      trigger: ".about",
-      start: "550vh center",
-      end: "800vh center",
-      scrub: 1,
-    }
-  })
+  // about outro transition
+  // gsap.to(".about", {
+  //   opacity: 0,
+  //   x: 50,
+  //   scrollTrigger: {
+  //     trigger: ".about",
+  //     start: "550vh center",
+  //     end: "800vh center",
+  //     scrub: 1,
+  //   }
+  // })
 
 
   // kris susie running
   gsap.set(".run", {
     x: "-200vh",
-    y: "-60vh",
+    y: "-50vh",
     rotation: 20,
   })
   gsap.to(".run", {
     x: "200vh",
-    y: "15vh",
-    duration: 6.5 ,
+    y: "150vh",
+    duration: 5 ,
 
     scrollTrigger: {
       trigger: ".run",
-      start: "500vh center",
-      end: "500vh center", 
+      start: "700vh center",
+      end: "700vh center", 
+      markers: true,
     }
   })
 
 
+  // HEART
+// gsap.set(".heart", {
+//   x: "200vh",
+//   y: "-20vh",
+// })
+
+// gsap.to(".heart", {
+//   x: "5vh",
+//   y: "20vh",
+
+//   scrollTrigger: {
+//     trigger: ".animation-container",
+//     start: "top center",
+//     end: "400vh center", 
+//     markers: true,
+//     scrub: 1,
+//   }
+// })
+
+
+
+
+// gsap.set(".animation-container .text1", {
+//   x: "50vh",
+//   y: "20vh",
+// })
+
+// text1
+gsap.from(".animation-container .text1", {
+  opacity: 0,
+  y: "10vh",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "350vh center",
+    end: "400vh center",
+    scrub: 1,   
+  }
+})
+// text2
+gsap.from(".animation-container .text2", {
+  opacity: 0,
+  y: "10vh",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "450vh center",
+    end: "500vh center",
+    scrub: 1,   
+  }
+})
+
+// FIGHT BUTTON
+gsap.from(".animation-container .fight", {
+  opacity: 0,
+  duration: 10,
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "800vh center",
+    end: "1000vh center",
+    scrub: 1,   
+  }
+})
+// pin
+gsap.to(".animation-container .fight", {
+  scale: "1.05",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "900vh center",
+    end: "bottom center",
+    scrub: true,   
+    pin: ".fight",
+    pinSpacing: false,
+  }
+})
+gsap.to(".animation-container .fight", {
+  x: "-90%",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "1400vh center",
+    end: "1500vh center",
+    scrub: 1,   
+  }
+})
+
+
+// text3
+
+gsap.from(".animation-container .text3", {
+  opacity: 0,
+  // y: "10vh",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "3800vh center",
+    end: "3900vh center",
+    scrub: 1,
+    markers: true,
+  }
+})
+
+gsap.to(".animation-container .text3", {
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "1100vh center",
+    end: "bottom center",
+    scrub: true,   
+    pin: ".text3",
+    pinSpacing: false,
+  }
+})
+
+gsap.to(".animation-container .text3", {
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "4900vh center",
+    end: "bottom center",
+    scrub: true,   
+  }
+})
+
+
+
+// text4
+gsap.to(".animation-container .text4", {
+  opacity: 0,
+  x: "100%",
+})
+
+gsap.from(".animation-container .text4", {
+  opacity: 0,
+  y: "10vh",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "4000vh center",
+    end: "4100vh center",
+    scrub: 1,
+    markers: true,
+  }
+})
+
+gsap.from(".animation-container .text4", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "4400vh center",
+    end: "4500vh center",
+    scrub: 1,
+    markers: true,
+  }
+})
+
+gsap.to(".animation-container .text4", {
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "1340vh center",
+    end: "bottom center",
+    scrub: true,   
+    pin: ".text4",
+    pinSpacing: false,
+  }
+})
+gsap.to(".animation-container .text4", {
+
+})
+
+// MERCy BUTTON
+gsap.set(".animation-container .mercy", {
+  opacity: 1,
+})
+gsap.from(".animation-container .mercy", {
+  opacity: 0,
+  duration: 10,
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "4600vh center",
+    end: "4700vh center",
+    scrub: 1,   
+    markers: true,
+  }
+})
+// pin
+gsap.to(".animation-container .mercy", {
+  scale: "1.05",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "1544vh center",
+    end: "bottom center",
+    scrub: true,   
+    pin: ".mercy",
+    pinSpacing: false,
+  }
+})
+gsap.to(".animation-container .mercy", {
+  x: "90%",
+  scrollTrigger: {
+    trigger: ".animation-container",
+    start: "1400vh center",
+    end: "1500vh center",
+    scrub: 1,   
+  }
+})
+
+// gallery imgs pls ahhhhh
+
+// img 1
+gsap.from(".gallery .frame #image1", {
+  opacity: 0,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image1",
+    start: "-100vh center",
+    end: "top center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+gsap.from(".gallery .frame #image1", {
+  opacity: 1,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image1",
+    start: "bottom center",
+    end: "bottom center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+
+// img 2
+gsap.from(".gallery .frame #image2", {
+  opacity: 0,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image2",
+    start: "-100vh center",
+    end: "top center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+gsap.from(".gallery .frame #image2", {
+  opacity: 1,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image2",
+    start: "bottom center",
+    end: "bottom center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+
+
+// img 3
+gsap.from(".gallery .frame #image3", {
+  opacity: 0,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image3",
+    start: "-100vh center",
+    end: "top center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+gsap.from(".gallery .frame #image3", {
+  opacity: 1,
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#image3",
+    start: "bottom center",
+    end: "bottom center",
+    scrub: 1,   
+    markers: true, 
+  }
+})
+
+
 });
 
+// NOTES
+// fix the or bug
+// make .run run agin when scrolled start
+// make background of gallery
+// fix nav
+// make features
+// make footer
