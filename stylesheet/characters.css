@@ -1,0 +1,186 @@
+
+
+*, *::before , *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'deltarune';
+    overflow: hidden;
+
+    
+}
+
+/* .ttf font import */
+@font-face {
+  font-family: deltarune;
+  src: url(Assets/Fonts/undertale-deltarune-text-font-extended.ttf);
+}
+
+@font-face {
+  font-family: deltarune2;
+  src: url(Assets/Fonts/deltarune.ttf);
+}
+
+
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 1rem 0; /* Adjust the padding as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    text-align: center; /* Center align the links */
+}
+
+.navbar a {
+    color: #fff; /* White color for the links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 1rem; /* Add space between links */
+}
+
+
+.wrapper {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.logo {
+  font-family: deltarune2;
+    font-size: 8rem;
+    width: 30vh;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    top: 15%;
+    left: 4rem;
+    line-height: 0.9;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.line {
+    background-color: red;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.character::before {
+    content: '';
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.block {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.kris::before, .kris .block {
+    background-color: #75FBED
+    ;
+}
+
+.susie::before, .susie .block {
+    background-color: #af67af;
+}
+
+.ralsei::before, .ralsei .block {
+    background-color: #4dcc8e;
+}
+
+.caption {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    width: 30%;
+    font-weight: 400;
+    color: #444;
+    font-family: deltarune;
+    transform: translate(100%, 100%);
+}
+
+.character img {
+    position: relative;
+    z-index: 10;
+    height: 90vh;
+    width: auto;
+    transform: translateY(-100%);
+}
+
+.huge-text {
+    font-size: 20rem;
+    width: 100%;
+    text-align: center;
+    color: #f52b2b;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+    font-weight: 700;
+}
+
+.nickname {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-200%);
+}
+
+.nickname span {
+    display: block;
+    font-size: 70%;
+    color: #fff;
+}
+
+.quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    width: 30%;
+    text-align: right;
+    transform: translateY(200%);
+}
+
+.quote::before, .quote::after {
+    content: '';
+    color: #fff;
+}

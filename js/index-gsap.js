@@ -346,16 +346,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
   // about outro transition
-  // gsap.to(".about", {
-  //   opacity: 0,
-  //   x: 50,
-  //   scrollTrigger: {
-  //     trigger: ".about",
-  //     start: "550vh center",
-  //     end: "800vh center",
-  //     scrub: 1,
-  //   }
-  // })
+  gsap.to(".about", {
+    opacity: 0,
+    x: 50,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "550vh center",
+      end: "800vh center",
+      scrub: 1,
+      markers: true,
+    }
+  })
 
 
   // kris susie running
@@ -661,5 +662,5 @@ gsap.from(".gallery .frame #image3", {
 // make .run run agin when scrolled start
 // make background of gallery
 // fix nav
-// make features
+// make features gallery
 // make footer
