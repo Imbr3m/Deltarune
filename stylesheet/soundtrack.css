@@ -23,7 +23,8 @@ body {
   grid-template-columns: 35vw 65vw;
   width: 100vw;
   height: 100vh;
-  background-color: #E1CAF1;
+  background-color: #cf3405
+  ;
   color: #1e1e1e;
   overflow: hidden;
 }
