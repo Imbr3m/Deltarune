@@ -35,7 +35,9 @@ loadSong(songs[songIndex], artists[artistIndex], bgColor[bgColorIndex]);
 function loadSong(song, artistName, bgColorName) {
 
   title.innerText = song;
-  artist.innerText = artistName;
+
+  artist.innerText = "Toby Fox";
+  
   audio.src = `stylesheet/Assets/music/${song}.mp3`;
   cover.src = `imgs/covers/${song}.jpg`
 
