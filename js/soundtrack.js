@@ -17,7 +17,7 @@ let musicNo = document.querySelectorAll(".music_no");
 
 // declaring songs, artist, and bg-color 
 const songs = ['BIG SHOT', 'Attack of the Killer Queen', 'Beginning', 'Field of Hopes and Dreams', 'Rude Buster'];
-const artists = ['Toby Fox', 'Toby Fox', 'Toby Fox', 'Toby Fox', 'Toby Fox']; 
+const artists = ['BIG SHOT', 'Attack of the Killer Queen', 'Beginning', 'Field of Hopes and Dreams', 'Rude Buster']; 
 const bgColor = ['#E1CAF1', '#EFEEE8', '#EAEC4C', '#8FB7BE', '#F5B2C6']; 
 
 
