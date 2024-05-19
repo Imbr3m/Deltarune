@@ -19,8 +19,8 @@ body {
 /* Container for the entire modal */
 .music_modal_container {
   position: relative;
-  display: grid; /* Add this line */
-  grid-template-columns: 35vw 65vw; /* Corrected values */
+  display: grid;
+  grid-template-columns: 35vw 65vw;
   width: 100vw;
   height: 100vh;
   background-color: #E1CAF1;
@@ -28,7 +28,6 @@ body {
   overflow: hidden;
 }
 
-/* Image Container */
 .music_img_container {
   display: flex;
   align-items: center;
@@ -45,15 +44,13 @@ body {
   height: auto;
 }
 
-/* Content Area */
 .music_modal_content {
   display: flex;
   flex-direction: column;
   padding: 5vh 2.5vw;
-  z-index: 2; /* Ensure it's above the background image */
+  z-index: 2;
 }
 
-/* Music Number Container */
 .music_no_container {
   position: absolute;
   top: 0;
@@ -79,21 +76,19 @@ body {
   z-index: 1;
 }
 
-/* Navigation */
 .music_modal_content nav {
   display: flex;
   gap: 5vw;
   font-weight: 500;
   font-size: 1vw;
-  z-index: 3; /* Ensure it's above other content */
+  z-index: 3;
 }
 
-/* Music Details */
 .music_details {
   margin-top: 12.5vh;
   display: flex;
   flex-direction: column;
-  z-index: 3; /* Ensure it's above other content */
+  z-index: 3;
 }
 
 .title {
@@ -108,7 +103,6 @@ body {
   text-transform: capitalize;
 }
 
-/* Progress Bar */
 .progress_bar {
   position: relative;
   margin-top: 7.5vh;
@@ -117,7 +111,7 @@ body {
   border-radius: 1vw;
   background-color: #ffffff;
   cursor: pointer;
-  z-index: 3; /* Ensure it's above other content */
+  z-index: 3;
 }
 
 .progress_bar span {
@@ -143,12 +137,11 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Control Buttons */
 .controls {
   margin-top: 5vh;
   display: flex;
   gap: 2vw;
-  z-index: 3; /* Ensure it's above other content */
+  z-index: 3;
 }
 
 .controls button img {
@@ -172,12 +165,11 @@ body {
   display: block;
 }
 
-/* Album Thumbnails */
 .music_albums {
   margin-top: 10vh;
   display: flex;
   gap: 2vw;
-  z-index: 3; /* Ensure it's above other content */
+  z-index: 3;
 }
 
 .music_albums img {
@@ -185,4 +177,142 @@ body {
   height: 19vh;
   object-fit: cover;
   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .music_modal_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 60vh;
+  }
+
+  .music_img_container {
+    height: 40vh;
+  }
+
+  .music_modal_content {
+    padding: 2.5vh 5vw;
+  }
+
+  .no_big {
+    font-size: 10vw;
+  }
+
+  .no_small {
+    font-size: 6vw;
+  }
+
+  .music_modal_content nav {
+    font-size: 2vw;
+    gap: 3vw;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .artist {
+    font-size: 2vw;
+  }
+
+  .progress_bar {
+    height: 2vh;
+  }
+
+  .controls {
+    margin-top: 3vh;
+    gap: 3vw;
+  }
+
+  .action_btn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .music_albums img {
+    width: 20vw;
+    height: 25vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .music_modal_content {
+    padding: 2.5vh 2.5vw;
+  }
+
+  .no_big {
+    font-size: 12vw;
+  }
+
+  .no_small {
+    font-size: 8vw;
+  }
+
+  .music_modal_content nav {
+    font-size: 3vw;
+    gap: 2vw;
+  }
+
+  .title {
+    font-size: 6vw;
+  }
+
+  .artist {
+    font-size: 3vw;
+  }
+
+  .progress_bar {
+    height: 3vh;
+  }
+
+  .controls {
+    gap: 2vw;
+  }
+
+  .action_btn {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .music_albums img {
+    width: 25vw;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .no_big {
+    font-size: 15vw;
+  }
+
+  .no_small {
+    font-size: 10vw;
+  }
+
+  .music_modal_content nav {
+    font-size: 4vw;
+    gap: 1vw;
+  }
+
+  .title {
+    font-size: 8vw;
+  }
+
+  .artist {
+    font-size: 4vw;
+  }
+
+  .controls {
+    gap: 1vw;
+  }
+
+  .action_btn {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .music_albums img {
+    width: 30vw;
+    height: 35vh;
+  }
 }

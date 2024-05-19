@@ -116,8 +116,13 @@ function pauseSong() {
 }
 
 
+let isAnimating = false;
+
 // previous function
 function prevSong() {
+  if (isAnimating) return;
+  isAnimating = true;
+
   songIndex--;
   artistIndex--;
   bgColorIndex--;
@@ -132,12 +137,9 @@ function prevSong() {
     bgColorIndex = bgColor.length-1;
   }
 
-
   artists.forEach(el => {
-
-    if(el === artists[artistIndex]) {
+    if (el === artists[artistIndex]) {
       let albumCover = el.replace(/\s/g, '');
-
       gsap.to(`#${albumCover}`, {
         duration: 0.75,
         y: -20,
@@ -146,7 +148,6 @@ function prevSong() {
       });
     } else {
       let albumCover = el.replace(/\s/g, '');
-
       gsap.to(`#${albumCover}`, {
         duration: 0.75,
         y: 0,
@@ -156,15 +157,18 @@ function prevSong() {
     }
   });
 
-  
   loadSong(songs[songIndex], artists[artistIndex], bgColor[bgColorIndex]);
-
   playSong();
 
+  setTimeout(() => {
+    isAnimating = false;
+  }, 1000); // Adjust the cooldown time as needed (in milliseconds)
 }
 
-
 function nextSong() {
+  if (isAnimating) return;
+  isAnimating = true;
+
   songIndex++;
   artistIndex++;
   bgColorIndex++;
@@ -179,22 +183,17 @@ function nextSong() {
     bgColorIndex = 0;
   }
 
-
   artists.forEach(el => {
-
-    if(el === artists[artistIndex]) {
-
+    if (el === artists[artistIndex]) {
       let albumCover = el.replace(/\s/g, '');
-
       gsap.to(`#${albumCover}`, {
         duration: 0.75,
         y: -20,
         opacity: 1,
-        ease: "EaseInOut"
+        ease: "EaseInOut",
       });
     } else {
       let albumCover = el.replace(/\s/g, '');
-
       gsap.to(`#${albumCover}`, {
         duration: 0.75,
         y: 0,
@@ -204,12 +203,14 @@ function nextSong() {
     }
   });
 
-  
   loadSong(songs[songIndex], artists[artistIndex], bgColor[bgColorIndex]);
-
   playSong();
 
+  setTimeout(() => {
+    isAnimating = false;
+  }, 1000); // Adjust the cooldown time as needed (in milliseconds)
 }
+
 
 // proggress bar thingie
 function updateProgress(e) {
