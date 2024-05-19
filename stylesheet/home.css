@@ -23,9 +23,9 @@ img {
   object-fit: cover;
 }
 /* hides the scrollbar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 /* .ttf font import */
 @font-face {

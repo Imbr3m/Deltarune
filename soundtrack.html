@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet/soundtrack.css">
+  <title>Soundtrack</title>
+</head>
+<body>
+
+
+  <div class="music_modal_container" id="music_modal_container">
+    <div class="music_img_container">
+      <img src="imgs/covers/Attack of the Killer Queen.jpg" id="cover">
+    </div>
+
+    <div class="music_modal_content">
+
+      <div class="music_no_container">
+        <span class="no_big music_no">01</span>
+        <span class="no_small music_no">01</span>
+      </div>
+    
+
+      <nav>
+        <span>Albums</span>
+        <span>Events</span>
+        <span>News</span>
+        <span>Contracts</span>
+      </nav>
+
+      <div class="music_details">
+        <span class="title" id="title"></span>
+        <span class="artist" id="artist"></span>
+      
+
+        <div class="progress_bar" id="progress_bar">
+          <span id="currentTime">0:00</span>
+          <span id="duration">0:00</span>
+          <span class="progress" id="progress"></span>
+        </div>
+
+        <audio src="stylesheet/Assets/music/BIG SHOT.mp3" id="audio"></audio>
+
+        <!-- 5:57 -->
+        <div class="controls"> 
+
+          <button id="prev" class="action_btn">
+            <img src="imgs/buttons/music-buttons/rewind-button.png" alt="">
+          </button>
+
+          <button id="play" class="action_btn action_btn_big">
+            <!-- inside has pause_btn svg and play_btn svg -->
+            <img src="imgs/buttons/music-buttons/pause.png" id="pause_btn">
+            <img src="imgs/buttons/music-buttons/play-button-arrowhead.png" id="play_btn">
+          </button>
+
+          <button id="next" class="action_btn">
+            <img src="imgs/buttons/music-buttons/forward-button.png" alt="">
+          </button>
+        </div>
+      </div>
+    
+      <div class="music_albums">
+        <img src="imgs/covers/BIG SHOT.jpg" id="album1">
+        <img src="imgs/covers/Attack of the Killer Queen.jpg" id="album2">
+        <img src="imgs/covers/Beginning.jpg" id="album3">
+        <img src="imgs/covers/Field of Hopes and Dreams.jpg" id="album4">
+        <img src="imgs/covers/Rude Buster.jpg" id="album5">
+      </div>
+    </div>
+  </div>
+
+    <!-- Gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- JS code -->
+  <script src="js/soundtrack.js"></script>
+</body>
+</html>
