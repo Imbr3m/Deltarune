@@ -28,7 +28,10 @@ body {
 }
 
 
-
+/* disables scroll */
+.no-scroll {
+    overflow: hidden;
+}
 
 .navbar {
     position: fixed;
@@ -37,7 +40,7 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 1rem 0; /* Adjust the padding as needed */
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 100; /* Ensure it's above other content */
     text-align: center; /* Center align the links */
 }
 

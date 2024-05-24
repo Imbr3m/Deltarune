@@ -2,27 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="stylesheet/shop.css" />
+
     <title>Merch</title>
+
+    <!-- Jquery and Tweenmax library for mouse effects -->
+    <link rel="stylesheet" href="stylesheet/mouse.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <!-- CSS -->
+    <!-- main css -->
+    <link rel="stylesheet" href="stylesheet/shop.css" />
+    <!-- loading screen css --> 
+    <link rel="stylesheet" href="stylesheet/loading.css">
   </head>
   <body>
-    <div class="header__bar">Free Shipping on Orders Over 50 AED</div>
+
+    <!-- loader -->
+    <div class="loading-box">
+      <div class="loading-screen">
+        <div class="loader">
+          <div class="loader-1 bar"></div>
+          <div class="loader-2 bar"></div>
+        </div>
+      </div>
+    
+      <div class="counter">
+        <div class="counter-1 digit">
+          <div class="num">0</div>
+          <div class="num num1offset1">1</div>
+        </div>
+        <div class="counter-2 digit">
+          <div class="num">0</div>
+          <div class="num num1offset2">1</div>
+          <div class="num">2</div>
+          <div class="num">3</div>
+          <div class="num">4</div>
+          <div class="num">5</div>
+          <div class="num">6</div>
+          <div class="num">7</div>
+          <div class="num">8</div>
+          <div class="num">9</div>
+          <div class="num">0</div>
+        </div>
+        <div class="counter-3 digit">
+          <div class="num">0</div>
+          <div class="num">1</div>
+          <div class="num">2</div>
+          <div class="num">3</div>
+          <div class="num">4</div>
+          <div class="num">5</div>
+          <div class="num">6</div>
+          <div class="num">7</div>
+          <div class="num">8</div>
+          <div class="num">9</div>
+          <div class="num">0</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- cursor html -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+
+    <!-- header -->
+    <div class="header__bar">Free Shipping on Orders Over 2 Blingos</div>
     <nav class="section__container nav__container">
-      <a href="#" class="nav__logo">
+      <a href="index.html" class="nav__logo">
         <img src="imgs/logo-2.png" id="logo">
       </a>
       <ul class="nav__links">
-        <li class="link"><a href="#">HOME</a></li>
-        <li class="link"><a href="#">SHOP</a></li>
-        <li class="link"><a href="#">PAGES</a></li>
-        <li class="link"><a href="#">BLOG</a></li>
-        <li class="link"><a href="#">LOOKBOOK</a></li>
+        <li class="link"><a href="index.html">HOME</a></li>
+        <li class="link"><a href="characters.html">CHARACTERS</a></li>
+        <li class="link"><a href="soundtrack.html">SOUNDTRACKS</a></li>
+        <li class="link"><a href="#">CONTACTS</a></li>
       </ul>
       <div class="nav__icons">
         <span><i class="ri-shield-user-line"></i></span>
@@ -31,15 +87,17 @@
       </div>
     </nav>
 
+
+    <!-- header -->
     <header>
       <div class="section__container header__container">
         <div class="header__content">
           <p>EXTRA 55% OFF BECAUSE WHY NOT???</p>
           <h1>Discover & Shop</h1>
-          <button class="btn">SHOP NOW</button>
+          <button class="btn mouse">SHOP NOW</button>
         </div>
         <div class="header__image">
-          <img src="imgs/shop-assets/kris-1.png" id="header-img" />
+          <img src="imgs/shop-assets/Spamton dancing.gif" id="header-img" />
         </div>
       </div>
     </header>
@@ -48,29 +106,32 @@
     <section class="section__container collection__container">
       <div class="collection__content">
         <h2 class="section__title">New Collection</h2>
-        <p>#35 ITEMS</p>
+        <p>#Spamton</p>
         <h4>Available on Store</h4>
-        <button class="btn">SHOP NOW</button>
+        <button class="btn mouse">SHOP NOW</button>
       </div>
-      <div class="section_container_image">
+      <div class="section_container_image ">
         <img src="imgs/shop-assets/Spamton-plush.webp" alt="collection" />
       </div>
     </section>
 
 
     <!-- SECTION 2 -->
-    <section class="section__container sale__container">
-      <h2 class="section__title">On Sale On Sale On Sale On Sale On Sale </h2>
+    <div class="ribbon-container">
+      <h2 class="onsale">On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On SaleOn Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale</h2>
+    </div>
+    <section class="section__container sale__container salebox">
+
       <div class="sale__grid">
-        <div class="sale__card" id="sale_card_1">
+        <div class="sale__card " id="sale_card_1">
           <div class="sale__content">
-            <p class="sale__subtitle">MAN OUTERWEAR</p>
+            <p class="sale__subtitle">SOUNDTRACKS</p>
             <h4 class="sale__title">sale <span>40%</span> off</h4>
             <p class="sale__subtitle">- DON'T MISS -</p>
             <button class="btn sale__btn">SHOP NOW</button>
           </div>
         </div>
-        <div class="sale__card" id="sale_card_2">
+        <div class="sale__card mouse" id="sale_card_2">
 
           <div class="sale__content">
             <p class="sale__subtitle">SPAMTON PLUSHIES!!!</p>
@@ -89,6 +150,9 @@
         </div>
       </div>
     </section>
+    <div class="ribbon-container" id="ribbon-container2">
+      <h2 class="onsale">On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On SaleOn Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale On Sale</h2>
+    </div>
 
     <section class="section__container musthave__container">
       <h2 class="section__title">Must Have</h2>
@@ -101,84 +165,105 @@
       </div>
       <div class="musthave__grid">
         <div class="musthave__card">
-          <img src="imgs/shop-assets/bestmusicaltrioshirt.webp" alt="must have" />
-          <h4>Basic long sleeve T-shirt</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <div class="image-container">
+            <img class="default-img" src="imgs/shop-assets/bestmusicaltrioshirt.webp" alt="must have" />
+            <img class="hover-img lift-up" src="imgs/shop-assets/closeup1.webp" alt="must have" />
+          </div>
+          <h4>BEST Musical Trio</h4>
+          <p><del>999 Schmekels</del> 998 Schmekels</p>
+        </div>
+        
+        <div class="musthave__card">
+          <div class="image-container">
+            <img class="default-img" src="imgs/shop-assets/floralsei_shirt.webp" alt="must have" />
+            <img class="hover-img lift-up" src="imgs/shop-assets/closeup3.webp  " alt="must have" />
+          </div>
+          <h4>Floralsei</h4>
+          <p><del>45 AED</del> 99 AED</p>
+        </div>
+        
+        <div class="musthave__card">
+          <div class="image-container">
+            <img class="default-img" src="imgs/shop-assets/product_DR_rudebuster_shirt.webp" alt="must have" />
+            <img class="hover-img lift-up" src="imgs/shop-assets/close.webp" alt="must have" />
+          </div>
+          <h4>Rudebuster</h4>
+          <p><del>3kg G</del> 1.5kg G</p>
+        </div>
+        
+        <div class="musthave__card">
+          <div class="image-container">
+            <img class="default-img" src="imgs/shop-assets/product_deltarune_now_s-your-chance_shirt.webp" alt="must have" />
+            <img class="hover-img lift-up" src="imgs/shop-assets/close1.webp" alt="must have" />
+          </div>
+          <h4>NOW'S YOUR CHANCE</h4>
+          <p><del>bigshot?</del> BIGSHOT</p>
+        </div>
+        
+
+
+        <div class="musthave__card">
+          <img class="lift-up" src="imgs/shop-assets/product_DR_lancer_sleep_mask.webp" alt="must have" />
+          <h4>Lancer Sleep Mask</h4>
+          <p><del>499 RBC</del> Bone</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/floralsei_shirt.webp" alt="must have" />
-          <h4>Ribbed T-shirt with buttons</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/product_DR_ch2_piano_score.webp" alt="must have" />
+          <h4>Deltarune Chapter 2 Piano Score</h4>
+          <p><del>212 Silver</del> 100 Silver</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_rudebuster_shirt.webp" alt="must have" />
-          <h4>Jacket withside strips</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <div class="image-container">
+            <img class="default-img" src="imgs/shop-assets/product_dr_begin_poster.webp" alt="must have" />
+            <img class="hover-img lift-up" src="imgs/shop-assets/closeup2.webp" alt="must have" />
+          </div>
+          <h4>The Beginning</h4>
+          <p><del>0 AED</del> 20,000 AED</p>
+        </div>        
+        <div class="musthave__card">
+          <img class="lift-up" src="imgs/shop-assets/product_DR_queen_sleep_mask.webp" alt="must have" />
+          <h4>Queen Sleep Mask</h4>
+          <p><del>Sleep</del> 2H of Sleep</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_deltarune_now_s-your-chance_shirt.webp" alt="must have" />
-          <h4>High-heel tubular sandals</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/product_DR_hat-ralsei_plush_.webp" alt="must have" />
+          <h4>Ralsei Plush</h4>
+          <p><del>23 lv</del> 5 lv</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_lancer_sleep_mask.webp" alt="must have" />
-          <h4>Coral fabric belt bag</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/product_DR_pins.webp" alt="must have" />
+          <h4>Character Pin Set</h4>
+          <p><del>idk</del> idk</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_ch2_piano_score.webp" alt="must have" />
-          <h4>Piggy skater slogan T-shirt</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/product_dr_ralsei_scarf.webp" alt="must have" />
+          <h4>Ralsei Scarf</h4>
+          <p><del>23 turtles</del> 15.5 turtles</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_dr_begin_poster.webp" alt="must have" />
-          <h4>White platform boots</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up mouse" src="imgs/shop-assets/Spamton-plush.webp" alt="must have" />
+          <h4>Spamton Plush</h4>
+          <p><del>1 Billion Shmeckels</del> 1 AED</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_queen_sleep_mask.webp" alt="must have" />
-          <h4>Sweater vest with sleeves</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/gumigoogifahaha_.gif" alt="must have" />
+          <h4>Gummigoo</h4>
+          <p><del>99 AED</del> 45 AED</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_hat-ralsei_plush_.webp" alt="must have" />
-          <h4>Slim fit pants</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/soundtracks-chapter2.webp" alt="must have" />
+          <h4>Deltarune Chapter 2 Vinyl Soundtrack</h4>
+          <p><del>5 Apples</del> 4 Apples 1 Grape</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_DR_pins.webp" alt="must have" />
-          <h4>Gray backpack</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up" src="imgs/shop-assets/product_deltarune_nubert_beanie.webp" alt="must have" />
+          <h4>Nubert Beanie</h4>
+          <p><del>$12</del> $11</p>
         </div>
         <div class="musthave__card">
-          <img src="imgs/shop-assets/product_dr_ralsei_scarf.webp" alt="must have" />
-          <h4>Neon sweatshirt</h4>
-          <p><del>$45.00</del> $75.00</p>
-        </div>
-        <div class="musthave__card">
-          <img src="imgs/shop-assets/Spamton-plush.webp" alt="must have" />
-          <h4>Hooded nautical jacket</h4>
-          <p><del>$45.00</del> $75.00</p>
-        </div>
-        <div class="musthave__card">
-          <img src="imgs/shop-assets/gumigoogifahaha_.gif" alt="must have" />
-          <h4>Hooded nautical jacket</h4>
-          <p><del>$45.00</del> $75.00</p>
-        </div>
-        <div class="musthave__card">
-          <img src="imgs/shop-assets/soundtracks-chapter2.webp" alt="must have" />
-          <h4>Hooded nautical jacket</h4>
-          <p><del>$45.00</del> $75.00</p>
-        </div>
-        <div class="musthave__card">
-          <img src="imgs/shop-assets/product_deltarune_nubert_beanie.webp" alt="must have" />
-          <h4>Hooded nautical jacket</h4>
-          <p><del>$45.00</del> $75.00</p>
-        </div>
-        <div class="musthave__card">
-          <img src="imgs/shop-assets/product_deltarune_spamton-specil-fun-pak.webp" alt="must have" />
-          <h4>Hooded nautical jacket</h4>
-          <p><del>$45.00</del> $75.00</p>
+          <img class="lift-up mouse" src="imgs/shop-assets/product_deltarune_spamton-specil-fun-pak.webp" alt="must have" />
+          <h4>Spamton's Specil Fun Pak</h4>
+          <p><del>1 AED</del> FREE!!!</p>
         </div>
       </div>
     </section>
@@ -254,7 +339,11 @@
       <!-- Gsap and Scrolltrigger -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <!-- gsap js -->
-    <script src="js/merch-gsap.js"></script>
+  <!-- gsap js -->
+  <script src="js/merch-gsap.js"></script>
+  <!-- mouse js -->
+  <script src="js/mouse.js"></script>
+  <!-- loading js -->
+  <script src="js/loading.js"></script>
   </body>
 </html>

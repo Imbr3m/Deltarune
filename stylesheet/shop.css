@@ -15,6 +15,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
 /* .ttf font import */
 @font-face {
   font-family: deltarune;
@@ -30,8 +35,23 @@
 #logo {
   width: 5vw;
   height: auto;
+  position: fixed;
+
+  transform: translateY(-50%);
+
+  z-index: 100;
 }
 
+
+/* disables scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* hides the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
 
 .section__container {
   max-width: var(--max-width);
@@ -40,8 +60,11 @@
 }
 
 .section_container_image {
-  background-color: rebeccapurple;
+  border-radius: 100%;
 }
+
+
+
 
 .section__title {
   padding-bottom: 0.5rem;
@@ -172,7 +195,6 @@ header {
 }
 
 .header__image img {
-  max-width: 400px;
   position: absolute;
   bottom: -5rem;
 }
@@ -218,6 +240,38 @@ header {
 .collection__content .btn:hover {
   background-color: var(--text-dark);
   color: var(--white);
+}
+
+
+
+.onsale {
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Ensures the text stays within the bounds */
+  display: block;
+  font-size: 24px;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+.ribbon-container {
+  overflow: hidden;
+  position: relative;
+  transform: translateY(100%);
+  z-index: 1;
+}
+#ribbon-container2 {
+  transform: translateY(-50%);
+}
+
+.onsale {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 .sale__grid {
@@ -333,6 +387,10 @@ header {
   font-size: 1rem;
   font-weight: 600;
 }
+.musthave__card h4:hover {
+  color: rebeccapurple;
+  cursor: pointer;
+}
 
 .musthave__card p {
   font-size: 0.9rem;
@@ -344,6 +402,33 @@ header {
   font-weight: 400;
   color: var(--text-light);
 }
+
+.image-container {
+  position: relative;
+  height: 33vh;
+}
+.image-container img:hover {
+  cursor: pointer;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.lift-up:hover {
+  cursor: pointer;
+}
+
+.hover-img {
+  opacity: 0;
+  border-radius: 10%;
+}
+
 
 .news {
   background-color: var(--extra-light);
@@ -425,15 +510,12 @@ footer {
 
 
 
-
-
-
-
 /* image id css */
 
 #header-img {
   height: 35rem;
-  width: 50%;
+  width: auto;
+  transform: translateX(0%);
 }
 
 
