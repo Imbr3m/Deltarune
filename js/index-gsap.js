@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
       scrub: 1,
     }
   })
-
   gsap.to(".logo", {
     y: "-50vh",
     scale: 0.34,
@@ -37,6 +36,25 @@ document.addEventListener("DOMContentLoaded", function() {
       scrub: 1,
     }
   })
+  gsap.fromTo(".logo", 
+  { 
+    opacity: 1 
+  }, 
+  { 
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".castle",
+      start: "center 500vh",
+      end: "center 400vh",
+      scrub: 1,
+      markers: true,
+    }
+  }
+);
+
+
+  
 
 
   // CASTLE ANIMATION
@@ -99,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
 
-
   // hides the gradient
   gsap.to(".gradient", {
     y: "-400vh",
@@ -112,122 +129,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
 
+  // CASTLE GSAP END
 
-  // GSAP STARS
-  gsap.to(".star1", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.5, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star2", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.9, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star3", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 1.2, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star4", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.1, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star5", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.78, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star6", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.4, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star7", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.5, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star8", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.5, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star9", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.3, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star10", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.7, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star11", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 0.1, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.to(".star12", {
-    duration: 1.5,
-    opacity: 0, 
-    delay: 1.2, 
-    repeat: "-1",
-    yoyo: true,
-  });
-  gsap.from(".stars", {
+
+
+// NAV GSAP ANIMATION
+  gsap.from("nav", {
     opacity: 0,
-    y: "-25vh",
-    scale: 10,
-    delay: 1,
+    y: "-100%",
     scrollTrigger: {
-      trigger: ".logo",
-      start: "center 300vh",
-      end: "400vh 300vh",
+      trigger: ".landing-page",
+      start: "top 100vh",
+      end: "top 100vh",
       scrub: 1,
-    }
+    },
   })
-    // zoom
-  gsap.to(".stars", {
-    transformOrgin: "center 500vh",
-    scale: 40,
-    ease: "ease",
-    scrollTrigger: {
-      trigger: ".castle",
-      start: "500vh 500vh",
-      end: "2000vh 500vh",
-      scrub: 1,
-    }
-  })
-
-  
-
-
-
-
 
   // Video transition
   gsap.from(".video-title", {
@@ -238,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "top 100vh",
       end: "top 100vh",
       scrub: 1,
-      
+    
     }
   })
   
@@ -354,7 +270,6 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "550vh center",
       end: "800vh center",
       scrub: 1,
-      markers: true,
     }
   })
 
@@ -374,29 +289,11 @@ document.addEventListener("DOMContentLoaded", function() {
       trigger: ".run",
       start: "700vh center",
       end: "700vh center", 
-      markers: true,
+      
     }
   })
 
 
-  // HEART
-// gsap.set(".heart", {
-//   x: "200vh",
-//   y: "-20vh",
-// })
-
-// gsap.to(".heart", {
-//   x: "5vh",
-//   y: "20vh",
-
-//   scrollTrigger: {
-//     trigger: ".animation-container",
-//     start: "top center",
-//     end: "400vh center", 
-//     markers: true,
-//     scrub: 1,
-//   }
-// })
 
 
 
@@ -473,7 +370,7 @@ gsap.from(".animation-container .text3", {
     start: "3800vh center",
     end: "3900vh center",
     scrub: 1,
-    markers: true,
+    
   }
 })
 
@@ -513,7 +410,7 @@ gsap.from(".animation-container .text4", {
     start: "4000vh center",
     end: "4100vh center",
     scrub: 1,
-    markers: true,
+    
   }
 })
 
@@ -524,7 +421,7 @@ gsap.from(".animation-container .text4", {
     start: "4400vh center",
     end: "4500vh center",
     scrub: 1,
-    markers: true,
+    
   }
 })
 
@@ -554,7 +451,7 @@ gsap.from(".animation-container .mercy", {
     start: "4600vh center",
     end: "4700vh center",
     scrub: 1,   
-    markers: true,
+    
   }
 })
 // pin
@@ -590,7 +487,7 @@ gsap.from(".gallery .frame #image1", {
     start: "-100vh center",
     end: "top center",
     scrub: 1,   
-    markers: true, 
+     
   }
 })
 gsap.from(".gallery .frame #image1", {
@@ -601,7 +498,7 @@ gsap.from(".gallery .frame #image1", {
     start: "bottom center",
     end: "bottom center",
     scrub: 1,   
-    markers: true, 
+     
   }
 })
 
@@ -614,7 +511,7 @@ gsap.from(".gallery .frame #image2", {
     start: "-100vh center",
     end: "top center",
     scrub: 1,   
-    markers: true, 
+     
   }
 })
 gsap.from(".gallery .frame #image2", {
@@ -625,7 +522,7 @@ gsap.from(".gallery .frame #image2", {
     start: "bottom center",
     end: "bottom center",
     scrub: 1,   
-    markers: true, 
+     
   }
 })
 
@@ -639,7 +536,7 @@ gsap.from(".gallery .frame #image3", {
     start: "-100vh center",
     end: "top center",
     scrub: 1,   
-    markers: true, 
+     
   }
 })
 gsap.from(".gallery .frame #image3", {
@@ -650,12 +547,16 @@ gsap.from(".gallery .frame #image3", {
     start: "bottom center",
     end: "bottom center",
     scrub: 1,   
-    markers: true, 
   }
 })
 
 
 });
+
+
+
+
+
 
 // NOTES
 // fix the or bug

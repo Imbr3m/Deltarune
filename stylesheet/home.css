@@ -44,53 +44,39 @@ img {
   src: url(Assets/Fonts/deltarune.ttf);
 }
 
-.cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: rgba(144, 70, 254, 0.6);
-  opacity: 0;
-  z-index: 10000;
-  user-select: none;
-  pointer-events: none;
-}
-
-
-
-/* nav {
+nav {
   position: fixed;
   top: 0;
   width: 100%;
   min-height: 10vh;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(0,0,0,0) 100%);z-index: 5;
-  display: flex; 
-  justify-content: center;  
-  align-items: center; 
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, #342DB5 20%);
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 90%;
-  display: flex; 
-  justify-content: space-between;
+.nav-btn {
+  height: 100%;
+  width: 20%;
+  
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
 }
 
-nav ul li {
-  font-size: 1.5rem;
-  margin: 0px 10px;
-  color: black;
+.nav-btn a{
+  color: white;
+  text-decoration: none;
 }
-nav ul li span{
-  background-color: red;
-  width: 10vh;
-} */
 
-
+.nav-btn span a{
+  font-family: deltarune2;
+  font-size: 2rem;
+}
 
 
 /* logo css */
@@ -102,6 +88,19 @@ nav ul li span{
   transform: translate(-50%, 50%);
   z-index: 5;
 }
+
+.logo-text {
+  background-color: transparent;
+  font-family: deltarune2;
+
+}
+
+
+
+
+
+
+
 /* container div */
 .container {
   width: 100%;
@@ -144,80 +143,6 @@ nav ul li span{
   z-index: 2;
   background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 0, 0));
 }
-/* Stars */
-.stars {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  overflow: hidden;
-}
-/* individual stars*/
-.star1 {
-    height: 40px;
-    width: 40px;
-  transform: translate(13vh, 38vh );
-}
-.star2 {
-    height: 30px;
-    width: 30px;
-  transform: translate(20vh, 23vh );
-}
-.star3 {
-    height: 30px;
-    width: 30px;
-  transform: translate(0vh, 19vh );
-}
-.star4 {
-    height: 20px;
-    width: 20px;
-  transform: translate(30vh, 15vh );
-}
-.star5 {
-    height: 30px;
-    width: 30px;
-  transform: translate(45vh, 10vh );
-}
-.star6 {
-    height: 60px;
-    width: 40px;
-  transform: translate(-20vh, 57vh );
-}
-.star7 {
-    height: 30px;
-    width: 30px;
-  transform: translate(90vh, 14vh );
-}
-.star8 {
-    height: 30px;
-    width: 30px;
-  transform: translate(100vh, 10vh );
-}
-.star9 {
-    height: 20px;
-    width: 20px;
-  transform: translate(120vh, 25vh );
-}
-.star10 {
-    height: 30px;
-    width: 30px;
-  transform: translate(100vh, 16vh );
-}
-.star11 {
-    height: 10px;
-    width: 10px;
-  transform: translate(119vh, 40vh );
-}
-.star12 {
-  height: 60px;
-  width: 40px;
-  transform: translate(114vh, 16vh );
-}
-.star {
-    height: 30px;
-    width: 30px;
-  transform: translate(90vh, 14vh );
-}
 /* Castle CSS End */
 
 
@@ -228,7 +153,7 @@ nav ul li span{
 .landing-page {
   width: 100%;
   height: 100vh;
-  background: url("Assets/BG/village.gif");
+  background: url("Assets/BG/village-dark.gif.gif");
   background-size: cover;
   background-position: center;
   box-shadow: 0 60px 80px 0px black inset;

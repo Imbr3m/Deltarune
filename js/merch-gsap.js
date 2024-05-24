@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-
   // Section 2
   gsap.set(".ribbon-container", {
     rotate: -6,
@@ -83,55 +82,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   gsap.fromTo('body', 
-  { backgroundColor: 'white' }, // Start state
+  { backgroundColor: 'white' }, 
   { 
-      backgroundColor: 'black', // End state
+      backgroundColor: 'black', 
       scrollTrigger: {
           trigger: ".salebox",
           start: "-10% center",
           end: "100% center",
           markers: true,
-          toggleActions: "play reverse play reverse" // Ensures it changes back when scrolling back
+          toggleActions: "play reverse play reverse"
       }
-  }
-);
-
-
-// SECTION 3
-// must buy GSAP
-
-// Select all the lift-up images
-const liftUpImages = document.querySelectorAll('.lift-up');
-
-// Loop through each image
-liftUpImages.forEach(img => {
-  // Add event listener for mouseenter
-  img.addEventListener('mouseenter', () => {
-    // Lift up animation
-    gsap.to(img, { duration: 0.3, y: -10, ease: "power2.out" });
   });
 
-  // Add event listener for mouseleave
-  img.addEventListener('mouseleave', () => {
-    // Bring back to original position
-    gsap.to(img, { duration: 0.3, y: 0, ease: "power2.out" });
+
+  // SECTION 3
+  // must buy GSAP
+
+  // Select all the lift-up images
+  const liftUpImages = document.querySelectorAll('.lift-up');
+
+  // Loop through each image
+  liftUpImages.forEach(img => {
+    // Add event listener for mouseenter
+    img.addEventListener('mouseenter', () => {
+      // Lift up animation
+      gsap.to(img, { duration: 0.3, y: -10, ease: "power2.out" });
+    });
+
+    // Add event listener for mouseleave
+    img.addEventListener('mouseleave', () => {
+      // Bring back to original position
+      gsap.to(img, { duration: 0.3, y: 0, ease: "power2.out" });
+    });
   });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
 
 
