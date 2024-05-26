@@ -9,6 +9,7 @@
   --white: #ffffff;
   --max-width: 1200px;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -22,35 +23,14 @@ body {
 a {
   text-decoration: none;
 }
+
 img {
   width: 100%;
   display: block;
 }
+
 body {
   font-family: "deltarune", sans-serif;
-}
-
-
-/* .ttf font import */
-@font-face {
-  font-family: deltarune;
-  src: url(Assets/Fonts/undertale-deltarune-text-font-extended.ttf);
-}
-
-@font-face {
-  font-family: deltarune2;
-  src: url(Assets/Fonts/deltarune.ttf);
-}
-
-/* LOGO */
-#logo {
-  width: 5vw;
-  height: auto;
-  position: fixed;
-
-  transform: translateY(-50%);
-
-  z-index: 100;
 }
 
 /* disables scroll */
@@ -63,9 +43,36 @@ body {
   display: none;
 }
 
+/* .ttf font import */
+@font-face {
+  font-family: deltarune;
+  src: url(Assets/Fonts/undertale-deltarune-text-font-extended.ttf);
+}
 
-/* section contianer */
-.section__container {
+@font-face {
+  font-family: deltarune2;
+  src: url(Assets/Fonts/deltarune.ttf);
+}
+
+
+
+
+/* LOGO */
+#logo {
+  width: 5vw;
+  height: auto;
+  position: fixed;
+
+  transform: translateY(-50%);
+
+  z-index: 100;
+}
+
+
+
+
+/* section-class defult */
+.section_container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
@@ -73,7 +80,7 @@ body {
 .section_container_image {
   border-radius: 100%;
 }
-.section__title {
+.section_title {
   padding-bottom: 0.5rem;
   margin-bottom: 4rem;
   text-align: center;
@@ -82,7 +89,7 @@ body {
   color: var(--text-dark);
   position: relative;
 }
-.section__title::after {
+.section_title::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -101,38 +108,35 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+/* section end */
 
 
 
-
-.header__bar {
+/* Header bar and NAV */
+.header_bar {
   padding: 0.5rem;
   font-size: 0.8rem;
   text-align: center;
   background-color: var(--text-dark);
   color: var(--white);
 }
-
 .nav__container {
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .nav__logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-dark);
 }
-
 .nav__links {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .link a {
   padding: 0 0.5rem;
   font-size: 0.9rem;
@@ -140,108 +144,101 @@ body {
   color: var(--text-light);
   transition: 0.3s;
 }
-
 .link a:hover {
   color: var(--text-dark);
 }
-
 .nav__icons {
   display: flex;
   gap: 1rem;
 }
-
 .nav__icons span {
   font-size: 1.25rem;
   cursor: pointer;
 }
+/* NAV CSS END */
 
+
+
+/* Header landing page css */
 header {
   margin-top: 10rem;
   background-color: rgb(0, 0, 0);
 }
-
 .header__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-
 .header__content p {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-light);
   margin-bottom: 0.5rem;
 }
-
 .header__content h1 {
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 2rem;
   color: white;
 }
-
 .header__content .btn {
   background-color: white;
   color: black;
 }
-
 .header__image {
   position: relative;
 }
-
 .header__image img {
   position: absolute;
   bottom: -5rem;
 }
 
+
+
+/* secrion 1 css */
 .collection__container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .collection__container img {
   max-width: 400px;
   margin: auto;
 }
-
 .collection__content {
   margin-right: 10vh;
 }
-
-.collection__content .section__title {
+.collection__content .section_title {
   margin-bottom: 2rem;
 }
-
 .collection__content p {
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 0.5rem;
 }
-
 .collection__content h4 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-
 .collection__content .btn {
   border: 1px solid var(--text-dark);
   color: var(--text-dark);
   background-color: var(--white);
 }
-
 .collection__content .btn:hover {
   background-color: var(--text-dark);
   color: var(--white);
 }
+/* secrion 1 end */
 
 
 
+/* section 2 css */
 .onsale {
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Ensures the text stays within the bounds */
+  white-space: nowrap; 
+  overflow: hidden; 
   display: block;
   font-size: 24px;
   background-color: #e74c3c;
@@ -259,7 +256,6 @@ header {
 #ribbon-container2 {
   transform: translateY(-50%);
 }
-
 .onsale {
   display: inline-block;
   padding: 10px 20px;
@@ -268,19 +264,16 @@ header {
   font-size: 24px;
   white-space: nowrap;
 }
-
 .sale__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .sale__card {
   position: relative;
   overflow: hidden;
   height: 65vh;
 }
-
 #sale_card_1 {
   background: url('Assets/BG/battle-bg.gif');
   background-size: cover;
@@ -296,7 +289,6 @@ header {
   background-size: cover;
   background-position: center;
 }
-
 .sale__content {
   position: absolute;
   top: 50%;
@@ -306,26 +298,21 @@ header {
   color: var(--white);
   text-align: center;
 }
-
 .sale__title {
   font-size: 2rem;
   font-weight: 600;
 }
-
 .sale__title span {
   font-size: 2.5rem;
 }
-
 .sale__subtitle {
   font-size: 1rem;
 }
-
 .sale__btn {
   margin-top: 2rem;
   color: var(--white);
   background-color: var(--text-dark);
 }
-
 .sale__card::before {
   position: absolute;
   content: "";
@@ -336,16 +323,18 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
-
 .sale__card:hover::before {
   top: 0;
 }
-
 .sale__card:hover .sale__btn {
   color: var(--text-dark);
   background-color: var(--white);
 }
+/* Section 2 CSs */
 
+
+
+/* Section 3 */
 .musthave__nav {
   display: flex;
   align-items: center;
@@ -354,30 +343,25 @@ header {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-
 .musthave__nav a {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-light);
   transition: 0.3s;
 }
-
 .musthave__nav a:hover {
   color: var(--text-dark);
 }
-
 .musthave__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-
 .musthave__card {
   display: grid;
   gap: 0.5rem;
   color: var(--text-dark);
 }
-
 .musthave__card h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -386,18 +370,15 @@ header {
   color: rebeccapurple;
   cursor: pointer;
 }
-
 .musthave__card p {
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
-
 .musthave__card p del {
   font-weight: 400;
   color: var(--text-light);
 }
-
 .image-container {
   position: relative;
   height: 33vh;
@@ -405,7 +386,6 @@ header {
 .image-container img:hover {
   cursor: pointer;
 }
-
 .image-container img {
   position: absolute;
   top: 0;
@@ -414,21 +394,22 @@ header {
   height: auto;
   transition: opacity 0.3s ease;
 }
-
 .lift-up:hover {
   cursor: pointer;
 }
-
 .hover-img {
   opacity: 0;
   border-radius: 10%;
 }
+/* Section 3 end */
 
 
+
+
+/* News section */
 .news {
   background-color: var(--extra-light);
 }
-
 .news__card .news_image {
   width: 100%;
   height: 20vh;
@@ -439,59 +420,51 @@ header {
 
   object-fit: cover;
   object-position: center;
-
 }
 .news__card .news_image img {
   height: 100%;
 }
-
-
-
 .news__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .news__details {
   padding: 1rem;
   display: grid;
   gap: 1rem;
   text-align: center;
 }
-
 .news__details p {
   font-size: 0.8rem;
   color: var(--text-light);
 }
-
 .news__details p i {
   font-size: 0.5rem;
   color: var(--text-light);
   padding: 0.5rem;
 }
-
 .news__details p span {
   font-weight: 600;
 }
-
 .news__details h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
-
 .news__details a i {
   font-size: 1.2rem;
   color: var(--text-light);
   transition: 0.3s;
 }
-
 .news__details a:hover i {
   color: var(--text-dark);
 }
+/* News section end */
 
 
+
+/* Footer */
 footer {
   background-color: #FBFBFB;
   display: flex;
@@ -506,7 +479,6 @@ footer {
 
 
 /* image id css */
-
 #header-img {
   height: 35rem;
   width: auto;
