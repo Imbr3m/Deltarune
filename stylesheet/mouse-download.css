@@ -1,13 +1,9 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
+/* defults */
 * {
     box-sizing: border-box;
 }
 
+/* curser css */
 .cursor {
     position: absolute;
     width: 8px;
@@ -20,12 +16,10 @@ body {
     pointer-events: none;
     transform: scale(0.8);
 }
-
 #mouse {
   height: 50px;
   width: 50px ;
 }
-
 .cursor::before {
     content: "";
     transform: scale(1.5);
@@ -41,16 +35,13 @@ body {
     background-size: cover;
     opacity: 0;
 }
-
 .cursor.active {
     opacity: 1;
     transform: scale(12);
 }
-
 .cursor.active::before {
     opacity: 1;
 }
-
 .cursor-follower {
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
@@ -64,12 +55,10 @@ body {
     pointer-events: none;
     transform: translate(4px, 4px);
 }
-
 .cursor-follower.active {
     opacity: 0.3;
     transform: scale(0);
 }
-
 .mouse {
     cursor: none; /* Hide default cursor */
 }

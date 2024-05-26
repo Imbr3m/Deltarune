@@ -1,3 +1,8 @@
+// importing the gsap library
+// its a bit long because of the amount of animations i tried ti implement
+
+
+// Will run function if the DOM content is loaded:
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -49,11 +54,9 @@ document.addEventListener("DOMContentLoaded", function() {
       end: "center 400vh",
       scrub: 1,
     }
-  }
-);
+  });
 
 
-  
 
 
   // CASTLE ANIMATION
@@ -103,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
     }
   })
+  // make castle dissaper
   gsap.to(".castle", {
     opacity: 0,
     duration: 1,
@@ -115,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function() {
       
     }
   })
-
   // hides the gradient
   gsap.to(".gradient", {
     y: "-400vh",
@@ -132,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 // NAV GSAP ANIMATION
   gsap.from("nav", {
     opacity: 0,
@@ -143,8 +147,13 @@ document.addEventListener("DOMContentLoaded", function() {
       scrub: 1,
     },
   })
+  // gsap nav end
 
-  // Video transition
+
+
+
+
+  // Landing page gsap
   gsap.from(".video-title", {
     opacity: 0,
     y: "15vh",
@@ -153,10 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "top 100vh",
       end: "top 100vh",
       scrub: 1,
-    
     }
   })
-  
   gsap.from(".video-container", {
     opacity: 0,
     y: "15vh",
@@ -167,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function() {
       scrub: 3,
     }
   })
-
   gsap.to(".landing-page", {
     opacity: 0,
     scrollTrigger: {
@@ -178,9 +184,12 @@ document.addEventListener("DOMContentLoaded", function() {
       
     }
   })
+  // gsap Landing page end
   
 
 
+
+  
 // BLASTER
   const blasterTL = gsap.timeline({
     scrollTrigger: {
@@ -189,15 +198,14 @@ document.addEventListener("DOMContentLoaded", function() {
       end: "-500vh center", 
     }
   });
-// BL1
-blasterTL.to("#blaster1", { 
+  blasterTL.to("#blaster1", { 
     opacity: 1,
     duration: 0, 
   })
   .fromTo("#blaster1", { 
     opacity: 0, 
   }, {
-    opacity: 1, // Fade in
+    opacity: 1, 
     duration: 1,
     ease: "power1.inOut" 
   })
@@ -226,16 +234,18 @@ blasterTL.to("#blaster1", {
     duration: 3,
     ease: "power2.inOut", 
   });
-
+// GSAP BLASTER END
     
-// about 
 
+
+
+
+// about gsap
   gsap.set( ".about", {
     opacity: 1,
     rotate: 7,
     height: "0%",
   })
-
   gsap.to( ".about", {
     rotate: 0,
     scrollTrigger: {
@@ -245,6 +255,11 @@ blasterTL.to("#blaster1", {
       scrub: 1,
     }
   })
+  // about GSAP END
+
+
+
+
   // FEATURE
   gsap.from( ".featuring .title", {
     y: "-10vh",
@@ -267,10 +282,8 @@ blasterTL.to("#blaster1", {
       start: "top center",
       end: "20% center", 
       scrub: 1,
-      
     }
   })
-
   gsap.to( ".featuring-wrapper ", {
     opacity: 0,
     scrollTrigger: {
@@ -282,7 +295,10 @@ blasterTL.to("#blaster1", {
     }
   })
 
-  
+  // feature gsap end
+
+
+
 
 
   // kris susie running
@@ -295,40 +311,41 @@ blasterTL.to("#blaster1", {
     x: "200vh",
     y: "150vh",
     duration: 5 ,
-
     scrollTrigger: {
       trigger: ".run",
-      start: "700vh center",
-      end: "700vh center", 
-      
+      start: "500vh center",
+      end: "500vh center", 
     }
   })
+  // Running gspa end
 
 
-  // gallery
+
+
+
+  // gallery gsap
   // text1
   gsap.from(".animation-container .text1", {
     opacity: 0,
     y: "10vh",
+    duration: 2,
     scrollTrigger: {
       trigger: ".animation-container",
       start: "350vh center",
       end: "450vh center",
-      scrub: 1,
     }
   })
   // text2
   gsap.from(".animation-container .text2", {
     opacity: 0,
     y: "10vh",
+    duration: 2,
     scrollTrigger: {
       trigger: ".animation-container",
       start: "450vh center",
       end: "550vh center",
-      scrub: 1,   
     }
   })
-
   // FIGHT BUTTON
   gsap.from(".animation-container .fight", {
     opacity: 0,
@@ -361,10 +378,7 @@ blasterTL.to("#blaster1", {
       scrub: 1,   
     }
   })
-
-
   // text3
-
   gsap.from(".animation-container .text3", {
     opacity: 0,
     // y: "10vh",
@@ -376,7 +390,6 @@ blasterTL.to("#blaster1", {
       
     }
   })
-
   gsap.to(".animation-container .text3", {
     scrollTrigger: {
       trigger: ".animation-container",
@@ -387,7 +400,6 @@ blasterTL.to("#blaster1", {
       pinSpacing: false,
     }
   })
-
   gsap.to(".animation-container .text3", {
     scrollTrigger: {
       trigger: ".animation-container",
@@ -396,14 +408,10 @@ blasterTL.to("#blaster1", {
       scrub: true,   
     }
   })
-
-
-
   // text4
   gsap.to(".animation-container .text4", {
     opacity: 0,
   })
-
   gsap.from(".animation-container .text4", {
     opacity: 0,
     y: "10vh",
@@ -414,7 +422,6 @@ blasterTL.to("#blaster1", {
       scrub: 1,
     }
   })
-
   gsap.from(".animation-container .text4", {
     opacity: 1,
     scrollTrigger: {
@@ -425,7 +432,6 @@ blasterTL.to("#blaster1", {
       
     }
   })
-
   gsap.to(".animation-container .text4", {
     scrollTrigger: {
       trigger: ".animation-container",
@@ -436,7 +442,6 @@ blasterTL.to("#blaster1", {
       pinSpacing: false,
     }
   })
-
   // MERCy BUTTON
   gsap.set(".animation-container .mercy", {
     opacity: 1,
@@ -475,7 +480,6 @@ blasterTL.to("#blaster1", {
   });
 
   // IMAGES
-
   gsap.to("#image1", 
     {
       opacity: 1,
@@ -483,8 +487,7 @@ blasterTL.to("#blaster1", {
         trigger: "#image1",
         start: "start center",  
         end: "center center", 
-        scrub: true,         // Smooth scrubbing
-        markers: true,       // For debugging
+        scrub: true,          
       }
     });
   gsap.to("#image2", 
@@ -494,8 +497,7 @@ blasterTL.to("#blaster1", {
         trigger: "#image2",
         start: "start center",  
         end: "center center", 
-        scrub: true,         // Smooth scrubbing
-        markers: true,       // For debugging
+        scrub: true,         
       }
     });
   gsap.to("#image3", 
@@ -505,8 +507,7 @@ blasterTL.to("#blaster1", {
         trigger: "#image3",
         start: "start center",  
         end: "center center", 
-        scrub: true,         // Smooth scrubbing
-        markers: true,       // For debugging
+        scrub: true,       
       }
     });
   gsap.to("#image4", 
@@ -516,10 +517,13 @@ blasterTL.to("#blaster1", {
         trigger: "#image4",
         start: "start center",  
         end: "center center", 
-        scrub: true,         // Smooth scrubbing
-        markers: true,       // For debugging
+        scrub: true,       
       }
     });
+  // Gsap gallery end
+
+
+
 
 
 // DOWNLOAD
@@ -532,11 +536,21 @@ blasterTL.to("#blaster1", {
       trigger: "#download",
       start: "top center",  
       end: "top center", 
-      markers: true,       // For debugging
     }
   });
 
 });
+// Dwonload end gsap
+
+
+
+
+
+
+
+
+
+
 
 
 

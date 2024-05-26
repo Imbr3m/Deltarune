@@ -1,9 +1,7 @@
+// importin the gsap scrolltrigger library
 gsap.registerPlugin(ScrollTrigger);
-
-
+// plays the gsap if the dom content loaded
 document.addEventListener('DOMContentLoaded', () => {
-
-
   // header SCROLLTRIGGER
   gsap.set('.header__content .btn', {
     opacity: 0,
@@ -52,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-      // SPINNING SPAMTON
+  // SPINNING SPAMTON
   gsap.to(".section_container_image img", {
     rotate: 1000,
     scrollTrigger: {
@@ -89,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
           trigger: ".salebox",
           start: "-10% center",
           end: "100% center",
-          markers: true,
           toggleActions: "play reverse play reverse"
       }
   });
@@ -97,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // SECTION 3
   // must buy GSAP
-
   // Select all the lift-up images
   const liftUpImages = document.querySelectorAll('.lift-up');
 

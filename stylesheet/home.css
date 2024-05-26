@@ -1,7 +1,5 @@
 
 :root {
-  --main-color: #000000;
-  --secondary-color: #ffffff;
   --font-size: 16px;
 }
 
@@ -18,21 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* disables scroll */
-.no-scroll {
-  overflow: hidden;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* hides the scrollbar */
-::-webkit-scrollbar {
-  display: none;
-}
-
 /* .ttf font import */
 @font-face {
   font-family: deltarune;
@@ -44,6 +27,27 @@ img {
   src: url(Assets/Fonts/deltarune.ttf);
 }
 
+
+/* disables scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* makes image fit the parent div */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* hides the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Navigation CSS */
 nav {
   position: fixed;
   top: 0;
@@ -55,30 +59,23 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 .nav-btn {
   height: 100%;
   width: 20%;
-  
-
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
 }
-
 .nav-btn a{
   color: white;
   text-decoration: none;
 }
-
 .nav-btn span a{
   font-family: deltarune2;
   font-size: 2rem;
 }
-
-
 /* logo css */
 .logo {
   position: fixed;
@@ -88,25 +85,21 @@ nav {
   transform: translate(-50%, 50%);
   z-index: 5;
 }
-
 .logo-text {
   background-color: transparent;
   font-family: deltarune2;
-
 }
+/* NAVIGATION CSS END */
 
 
 
 
-
-
-
+/* CASTLE CSS */
 /* container div */
 .container {
   width: 100%;
   height: 100%;
 }
-/* castle css */
 .castle {
   position: fixed;
   top: 0;
@@ -144,7 +137,6 @@ nav {
   background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 0, 0));
 }
 /* Castle CSS End */
-
 
 
 
@@ -200,6 +192,7 @@ nav {
 /* Video CSS END */
 
 
+
 /* blasters */
 .blaster-container {
 
@@ -210,50 +203,33 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 .blaster {
   position: absolute;
   width: 250px;
   height: auto;
-
-
   mix-blend-mode: screen;
-
   z-index: 20;
 }
-
 #blaster1 {
   transform: translateY(100%);
 }
-
-
-
-
-
-
-
-
-
+/* BLASTER END */
 
 
 
 /* About section */
-
 .about-wrapper {
   margin-top: 25vh;
   position: relative;
   width: 120%;
   height: 100vh;
-  margin-left: -10%; /* Adjust to center the rotated element */
-  overflow: hidden; /* Hide overflowing content */
+  margin-left: -10%; 
+  overflow: hidden; 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-
-
-
 .about {
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(0,0,0,1) 100%);
   position: relative;
@@ -265,7 +241,6 @@ nav {
   align-items: center;
   z-index: 0;
 }
-
 .about .text {
   display: flex;
   justify-content: center;
@@ -289,6 +264,7 @@ nav {
   height: 80%;
   width: auto;
 }
+/* ABOUT SECTION END */
 
 
 
@@ -305,24 +281,21 @@ nav {
   align-items: center;
   justify-content: center;
 
-  background-size: cover; /* Ensure background covers the entire section */
-  background-position: center; /* Center the background */
+  background-size: cover; 
+  background-position: center; 
 }
-
-.featuring .boxing {
+.featuring .boxing /*I wrote boxing because box is taken*/ {
   padding: 20px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
 .featuring .title {
   font-size: 2rem;
   color: white;
   transform: translateY(-25vh);
 }
-
 .featuring .list {
   text-align: justify;
   list-style: disc;
@@ -331,9 +304,6 @@ nav {
   width: 70%;
   color: #fff;
 }
-
-
-
 /* arrows */
 .featuring .boxing .prev-arrow,
 .featuring .boxing .next-arrow {
@@ -341,33 +311,16 @@ nav {
   color: white;
   cursor: pointer;
 }
-
-/* Style the arrows to make them more visible */
 .featuring .boxing .prev-arrow {
-  margin-right: 20px; /* Add some space between the arrows and the list */
+  margin-right: 20px; 
 }
-
 .featuring .boxing .next-arrow {
-  margin-left: 20px; /* Add some space between the arrows and the list */
+  margin-left: 20px;
 }
-
-/* CSS for highlighted list items */
 .highlighted {
-  color: red; /* Change the color to red */
+  color: red; 
 }
 /* feature end */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -384,27 +337,11 @@ nav {
   height: 100%;
   width: auto;
 }
+/* running end */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* animation css */
 .animation-container {
   color: white;
   background-color: black;
@@ -415,7 +352,6 @@ nav {
   flex-direction: column;
   justify-content: top;
   align-items: center;
-
 }
 .animation-container .text {
   font-size: 5rem;
@@ -448,11 +384,9 @@ nav {
   width: 50vh;
   z-index: 1;
 }
-
 .animation-container .frame {
   position: absolute;
 }
-
 .animation-container .frame #image1 {
   opacity: 0;
   width: 50vw;
@@ -476,14 +410,13 @@ nav {
 
   transform: translate(70%,700%);
 }
-
 .animation-container .frame #image4 {
   opacity: 0;
   width: 100%;
   height: auto;
   transform: translateY(670%);
 }
-
+/* ANIMATION CSS END */
 
 
 
@@ -498,7 +431,6 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 /* Background */
 .download-section .background {
   width: 100%;
@@ -529,7 +461,6 @@ nav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
 }
-
 .download-buttons .button:hover {
   transform: scale(1.05);
 }
@@ -537,6 +468,8 @@ nav {
 .download-buttons .button:active {
   transform: scale(0.95);
 }
+/* DOWNLOAD CSS END */
+
 
 
 p {

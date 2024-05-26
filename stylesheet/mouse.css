@@ -1,3 +1,4 @@
+/* mouse css */
 html,
 body {
     margin: 0;
@@ -69,3 +70,6 @@ body {
     transform: scale(0);
 }
 
+.mouse {
+    cursor: none; /* Hide default cursor */
+}
