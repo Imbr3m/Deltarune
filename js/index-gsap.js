@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "center 500vh",
       end: "center 400vh",
       scrub: 1,
-      markers: true,
     }
   }
 );
@@ -180,98 +179,110 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   })
   
-  // ABOUT SQUARE
-  gsap.set(".about .square", {
-    x: "45vh",
+
+
+// BLASTER
+  const blasterTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about", 
+      start: "-500vh center",
+      end: "-500vh center", 
+    }
+  });
+// BL1
+blasterTL.to("#blaster1", { 
+    opacity: 1,
+    duration: 0, 
   })
-  gsap.from(".about .square", {
+  .fromTo("#blaster1", { 
+    opacity: 0, 
+  }, {
+    opacity: 1, // Fade in
+    duration: 1,
+    ease: "power1.inOut" 
+  })
+  .to("#blaster1", {
+    x: "-100vw",
+    delay: "-0.5",
+    duration: 3, 
+    ease: "power2.inOut", 
+    rotation: -70,
+    scale: 2.5,
+    onComplete: function() {
+      document.getElementById("blaster1").src = "imgs/blaster2.png";
+    }
+  })
+  .to(".about", {
+    delay: "-1",
+    height: "70%",
+    duration: 0.5, 
+    ease: "power2.inOut", 
+  })
+  .to("#blaster1", {
+    rotate: 0,
+    scale: 1,
+    x: "40vw",
+    y: "180vh",
+    duration: 3,
+    ease: "power2.inOut", 
+  });
+
+    
+// about 
+
+  gsap.set( ".about", {
+    opacity: 1,
+    rotate: 7,
+    height: "0%",
+  })
+
+  gsap.to( ".about", {
+    rotate: 0,
+    scrollTrigger: {
+      trigger: ".about", 
+      start: "-50% center",
+      end: "350% center", 
+      scrub: 1,
+    }
+  })
+  // FEATURE
+  gsap.from( ".featuring .title", {
+    y: "-10vh",
     opacity: 0,
     scrollTrigger: {
-      trigger: ".about",
-      start: "150vh center",
-      end: "200vh center",
+      trigger: ".featuring", 
+      start: "10% center",
+      end: "30% center", 
+      
+    }
+  })
+  gsap.set( ".featuring ", {
+    opacity: 0,
+  })
+  gsap.to( ".featuring ", {
+    y: "-10vh",
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".featuring", 
+      start: "top center",
+      end: "20% center", 
       scrub: 1,
-    }
-  })
-  gsap.from(".about .square", {
-    x: "-200vh",
-    rotate: "-720",
-    duration: 2,
-    scrollTrigger: {
-      trigger: ".about",
-      start: "150vh center",
-      end: "150vh center",
-      
-    }
-  })
-  gsap.to(".about .square", {
-    rotate: 1000,
-    scrollTrigger: {
-      trigger: ".landing-page",
-      start: "400vh top",
-      end: "5500vh top",
-      scrub: 1,
-      
-    }
-  })
-  gsap.to(".about .square", {
-    scale: 10,
-    scrollTrigger: {
-      trigger: ".about",
-      start: "center center",
-      end: "center center",
-      
       
     }
   })
 
-// about
-  gsap.to( ".about", {
-    background: "linear-gradient(180deg, rgba(32,32,32,0) 0%, rgba(60,60,60,1) 30%, rgba(60,60,60,1) 70%, rgba(255,255,255,0) 100%)",
-    scrollTrigger: {
-      trigger: ".landing-page",
-      start: "400vh top",
-      end: "500vh top",
-      scrub: 1,
-    },
-    
-  });
-  // about image jojo
-  gsap.from(".about .img-container", {
+  gsap.to( ".featuring-wrapper ", {
     opacity: 0,
-    x: 50,
     scrollTrigger: {
-      trigger: ".about",
-      start: "100vh center",
-      end: "200vh center",
-      scrub: 1,
-      
+      trigger: ".featuring", 
+      start: "center center",
+      end: "bottom center", 
+      scrub: true,
       
     }
   })
-  // text on the left 
-  gsap.from(".about .text", {
-    opacity: 0,
-    x: "-50",
-    scrollTrigger: {
-      trigger: ".about",
-      start: "150vh center",
-      end: "200vh center",
-      scrub: 1,   
- 
-    }
-  })
-  // about outro transition
-  gsap.to(".about", {
-    opacity: 0,
-    x: 50,
-    scrollTrigger: {
-      trigger: ".about",
-      start: "550vh center",
-      end: "800vh center",
-      scrub: 1,
-    }
-  })
+
+  
 
 
   // kris susie running
@@ -294,262 +305,236 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
 
+  // gallery
+  // text1
+  gsap.from(".animation-container .text1", {
+    opacity: 0,
+    y: "10vh",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "350vh center",
+      end: "450vh center",
+      scrub: 1,
+    }
+  })
+  // text2
+  gsap.from(".animation-container .text2", {
+    opacity: 0,
+    y: "10vh",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "450vh center",
+      end: "550vh center",
+      scrub: 1,   
+    }
+  })
+
+  // FIGHT BUTTON
+  gsap.from(".animation-container .fight", {
+    opacity: 0,
+    duration: 10,
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "800vh center",
+      end: "1000vh center",
+      scrub: 1,   
+    }
+  })
+  // pin
+  gsap.to(".animation-container .fight", {
+    scale: "1.05",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "900vh center",
+      end: "bottom center",
+      scrub: true,   
+      pin: ".fight",
+      pinSpacing: false,
+    }
+  })
+  gsap.to(".animation-container .fight", {
+    x: "-90%",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "1400vh center",
+      end: "1500vh center",
+      scrub: 1,   
+    }
+  })
+
+
+  // text3
+
+  gsap.from(".animation-container .text3", {
+    opacity: 0,
+    // y: "10vh",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "3800vh center",
+      end: "3900vh center",
+      scrub: 1,
+      
+    }
+  })
+
+  gsap.to(".animation-container .text3", {
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "1100vh center",
+      end: "bottom center",
+      scrub: true,   
+      pin: ".text3",
+      pinSpacing: false,
+    }
+  })
+
+  gsap.to(".animation-container .text3", {
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "4900vh center",
+      end: "bottom center",
+      scrub: true,   
+    }
+  })
 
 
 
+  // text4
+  gsap.to(".animation-container .text4", {
+    opacity: 0,
+  })
 
-// gsap.set(".animation-container .text1", {
-//   x: "50vh",
-//   y: "20vh",
-// })
+  gsap.from(".animation-container .text4", {
+    opacity: 0,
+    y: "10vh",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "4000vh center",
+      end: "4100vh center",
+      scrub: 1,
+    }
+  })
 
-// text1
-gsap.from(".animation-container .text1", {
-  opacity: 0,
-  y: "10vh",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "350vh center",
-    end: "400vh center",
-    scrub: 1,   
-  }
-})
-// text2
-gsap.from(".animation-container .text2", {
-  opacity: 0,
-  y: "10vh",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "450vh center",
-    end: "500vh center",
-    scrub: 1,   
-  }
-})
+  gsap.from(".animation-container .text4", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "4400vh center",
+      end: "4500vh center",
+      scrub: 1,
+      
+    }
+  })
 
-// FIGHT BUTTON
-gsap.from(".animation-container .fight", {
-  opacity: 0,
-  duration: 10,
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "800vh center",
-    end: "1000vh center",
-    scrub: 1,   
-  }
-})
-// pin
-gsap.to(".animation-container .fight", {
-  scale: "1.05",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "900vh center",
-    end: "bottom center",
-    scrub: true,   
-    pin: ".fight",
-    pinSpacing: false,
-  }
-})
-gsap.to(".animation-container .fight", {
-  x: "-90%",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "1400vh center",
-    end: "1500vh center",
-    scrub: 1,   
-  }
-})
+  gsap.to(".animation-container .text4", {
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "1340vh center",
+      end: "bottom center",
+      scrub: true,   
+      pin: ".text4",
+      pinSpacing: false,
+    }
+  })
 
+  // MERCy BUTTON
+  gsap.set(".animation-container .mercy", {
+    opacity: 1,
+  });
+  gsap.from(".animation-container .mercy", {
+    opacity: 0,
+    duration: 10,
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "4600vh center",
+      end: "4700vh center",
+      scrub: 1,   
+      
+    }
+  });
+  // pin
+  gsap.to(".animation-container .mercy", {
+    scale: "1.05",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "1544vh center",
+      end: "bottom center",
+      scrub: true,   
+      pin: ".mercy",
+      pinSpacing: false,
+    }
+  });
+  gsap.to(".animation-container .mercy", {
+    x: "90%",
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "1400vh center",
+      end: "1500vh center",
+      scrub: 1,   
+    }
+  });
 
-// text3
+  // IMAGES
 
-gsap.from(".animation-container .text3", {
-  opacity: 0,
-  // y: "10vh",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "3800vh center",
-    end: "3900vh center",
-    scrub: 1,
-    
-  }
-})
-
-gsap.to(".animation-container .text3", {
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "1100vh center",
-    end: "bottom center",
-    scrub: true,   
-    pin: ".text3",
-    pinSpacing: false,
-  }
-})
-
-gsap.to(".animation-container .text3", {
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "4900vh center",
-    end: "bottom center",
-    scrub: true,   
-  }
-})
-
-
-
-// text4
-gsap.to(".animation-container .text4", {
-  opacity: 0,
-  x: "100%",
-})
-
-gsap.from(".animation-container .text4", {
-  opacity: 0,
-  y: "10vh",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "4000vh center",
-    end: "4100vh center",
-    scrub: 1,
-    
-  }
-})
-
-gsap.from(".animation-container .text4", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "4400vh center",
-    end: "4500vh center",
-    scrub: 1,
-    
-  }
-})
-
-gsap.to(".animation-container .text4", {
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "1340vh center",
-    end: "bottom center",
-    scrub: true,   
-    pin: ".text4",
-    pinSpacing: false,
-  }
-})
-gsap.to(".animation-container .text4", {
-
-})
-
-// MERCy BUTTON
-gsap.set(".animation-container .mercy", {
-  opacity: 1,
-})
-gsap.from(".animation-container .mercy", {
-  opacity: 0,
-  duration: 10,
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "4600vh center",
-    end: "4700vh center",
-    scrub: 1,   
-    
-  }
-})
-// pin
-gsap.to(".animation-container .mercy", {
-  scale: "1.05",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "1544vh center",
-    end: "bottom center",
-    scrub: true,   
-    pin: ".mercy",
-    pinSpacing: false,
-  }
-})
-gsap.to(".animation-container .mercy", {
-  x: "90%",
-  scrollTrigger: {
-    trigger: ".animation-container",
-    start: "1400vh center",
-    end: "1500vh center",
-    scrub: 1,   
-  }
-})
-
-// gallery imgs pls ahhhhh
-
-// img 1
-gsap.from(".gallery .frame #image1", {
-  opacity: 0,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image1",
-    start: "-100vh center",
-    end: "top center",
-    scrub: 1,   
-     
-  }
-})
-gsap.from(".gallery .frame #image1", {
-  opacity: 1,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image1",
-    start: "bottom center",
-    end: "bottom center",
-    scrub: 1,   
-     
-  }
-})
-
-// img 2
-gsap.from(".gallery .frame #image2", {
-  opacity: 0,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image2",
-    start: "-100vh center",
-    end: "top center",
-    scrub: 1,   
-     
-  }
-})
-gsap.from(".gallery .frame #image2", {
-  opacity: 1,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image2",
-    start: "bottom center",
-    end: "bottom center",
-    scrub: 1,   
-     
-  }
-})
+  gsap.to("#image1", 
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#image1",
+        start: "start center",  
+        end: "center center", 
+        scrub: true,         // Smooth scrubbing
+        markers: true,       // For debugging
+      }
+    });
+  gsap.to("#image2", 
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#image2",
+        start: "start center",  
+        end: "center center", 
+        scrub: true,         // Smooth scrubbing
+        markers: true,       // For debugging
+      }
+    });
+  gsap.to("#image3", 
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#image3",
+        start: "start center",  
+        end: "center center", 
+        scrub: true,         // Smooth scrubbing
+        markers: true,       // For debugging
+      }
+    });
+  gsap.to("#image4", 
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#image4",
+        start: "start center",  
+        end: "center center", 
+        scrub: true,         // Smooth scrubbing
+        markers: true,       // For debugging
+      }
+    });
 
 
-// img 3
-gsap.from(".gallery .frame #image3", {
-  opacity: 0,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image3",
-    start: "-100vh center",
-    end: "top center",
-    scrub: 1,   
-     
-  }
-})
-gsap.from(".gallery .frame #image3", {
-  opacity: 1,
-  duration: 3,
-  scrollTrigger: {
-    trigger: "#image3",
-    start: "bottom center",
-    end: "bottom center",
-    scrub: 1,   
-  }
-})
-
+// DOWNLOAD
+  gsap.from("#download", 
+  {
+    opacity: 0,
+    scale: 1.1,
+    duration: 3,
+    scrollTrigger: {
+      trigger: "#download",
+      start: "top center",  
+      end: "top center", 
+      markers: true,       // For debugging
+    }
+  });
 
 });
 

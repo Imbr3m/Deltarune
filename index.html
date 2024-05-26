@@ -10,11 +10,16 @@
   <link rel="stylesheet" href="stylesheet/home.css">
   <!-- loading screen css --> 
   <link rel="stylesheet" href="stylesheet/loading.css">
+  <!-- mouse css -->
+  <link rel="stylesheet" href="stylesheet/mouse-download.css">
+  <!-- favivon -->
+  <link rel="icon" type="image/x-icon" href="imgs/logo-2.png">
+
 </head>
 <body>
 
   <!-- LOADING SCreEN -->
-  <!-- <div class="loading-box">
+  <div class="loading-box">
     <div class="loading-screen">
       <div class="loader">
         <div class="loader-1 bar"></div>
@@ -54,7 +59,11 @@
         <div class="num">0</div>
       </div>
     </div>
-  </div> -->
+  </div>
+
+  <!-- cursor html -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
   <nav>
     <div class="nav-btn">
@@ -71,7 +80,7 @@
       <a href="shop.html">MERCH</a>
     </div>
     <div class="nav-btn">
-      <a href="">DOWNLOAD</a>
+      <a href="#download">DOWNLOAD</a>
     </div>
   </nav>
 
@@ -114,56 +123,73 @@
     </div>
   </div>
 
+  <!-- ghaster blasters -->
+  <div class="blaster-container">
+    <img src="imgs/blaster1.png" id="blaster1" class="blaster">
+  </div>
 
-  <section class="about">
-    <div class="square"></div>
-    <div class="text">
-      <p>
-        UNDERTALE's parallel story, DELTARUNE. Meet new and old characters in a tale that steps closer to its end, chapter by chapter. Dodge bullets in nonviolent RPG battles as you listen to funky, FUNKY music. Try Chapter 1 and 2 for free... now!!! More chapters in development!!!
-      </p>
-    </div>
-    <div class="img-container">
-      <img src="imgs/characters/kris_jojo.gif" alt="">
-    </div>
-  </section>
-
-  <section class="featuring">
-    <div class="title">
-      <h1>FEATURING</h1>
-    </div>
-    <div class="boxing">
-
-      
+  <div class="about-wrapper">
+    <section class="about">
       
 
+      <div class="text">
+        <p>
+          UNDERTALE's parallel story, DELTARUNE. Meet new and old characters in a tale that steps closer to its end, chapter by chapter. Dodge bullets in nonviolent RPG battles as you listen to funky, FUNKY music. Try Chapter 1 and 2 for free... now!!! More chapters in development!!!
+        </p>
+      </div>
 
-    
-      <ul class="list">
-        <li>A massive soundtrack and story written by Toby Fox!</li>
-        <li>Meet new and endearing main characters, as well as familiar faces like Toriel, Sans, as more. Huh? Papyrus? No, he's busy. Sorry</li>
-        <li>Smooth and expressive pixel-animation by Temmie. She also has a new hat (in-game)</li>
-        <li>A linear, chapter-based system that you can pick up from anywhere.</li>
-        <li>Creative bullet-dodging based battles inspired by games like Touhou and Chrono Trigger.</li>
-        <li>Jevilishly difficult hidden bosses.</li>
-        <li>And...</li>
-        <li>...</li>
-        <li>... only 1 ending...?</li>
-      </ul>
+    </section>
+  </div>
+
+
+  <section class="featuring-wrapper">
+    <div class="featuring">
+      <div class="title">
+        <h1>FEATURING</h1>
+      </div>
+      <div class="boxing">
+        <div class="prev-arrow arrow">&larr;</div> <!-- Left arrow for previous feature -->
+        <ul class="list">
+          <li>A massive soundtrack and story written by Toby Fox!</li>
+          <li>Meet new and endearing main characters, as well as familiar faces like Toriel, Sans, as more. Huh? Papyrus? No, he's busy. Sorry</li>
+          <li>Smooth and expressive pixel-animation by Temmie. She also has a new hat (in-game)</li>
+          <li>A linear, chapter-based system that you can pick up from anywhere.</li>
+          <li>Creative bullet-dodging based battles inspired by games like Touhou and Chrono Trigger.</li>
+          <li>Jevilishly difficult hidden bosses.</li>
+          <li>And...</li>
+          <li>...</li>
+          <li>... only 1 ending...?</li>
+        </ul>
+        <div class="next-arrow arrow">&rarr;</div> <!-- Right arrow for next feature -->
+      </div>  
     </div>
   </section>
+  
+  
 
   <!-- kris and susie running -->
   <div class="run">
     <img src="imgs/characters/kris_susie_running.gif" alt="">
   </div>
 
-  <!-- DELTARUNE HEART AHHHHH -->
-  <!-- <div class="heart"></div> -->
 
-  <!-- features -->
+
+
   <section class="animation-container">
     <div class="whitespace2"></div>
 
+    <div class="frame">
+      <img src="imgs/img-gallery/genocide-1.jpg" alt="" id="image1">
+    </div>
+    <div class="frame">
+      <img src="imgs/img-gallery/genocide-2.jfif" alt="" id="image2">
+    </div>
+    <div class="frame">
+      <img src="imgs/img-gallery/genocide-4.jfif" alt="" id="image3">
+    </div>
+    <div class="frame">
+      <img src="imgs/img-gallery/sans-menacingfinal.png" alt="" id="image4">
+    </div>
     <div class="text1 text">
       <h1>WILL</h1>
     </div>
@@ -184,25 +210,23 @@
     </div>
   </section>
 
-  <aside class="gallery">
-    <div class="frame">
-      <img src="imgs/img-gallery/genocide-1.jpg" alt="" id="image1">
-    </div>
-    <div class="frame">
-      <img src="imgs/img-gallery/genocide-2.jfif" alt="" id="image2">
-    </div>
-    <div class="frame">
-      <img src="imgs/img-gallery/genocide-4.jfif" alt="" id="image3">
-    </div>
-    <div class="frame">
-      <img src="imgs/img-gallery/sans-menacing.jpg" alt="" id="image4">
-    </div>
+  <div class="whitespace"></div>
+  
+  <section class="download-section" id="download">
+    <!-- BG -->
+    <img class="background" src="stylesheet/Assets/BG/bgfrfraw.jpg" alt="Background Image">
+    
 
-    <a href="https://store.steampowered.com/app/1671210/DELTARUNE/" class="download">
-      <img src="stylesheet/Assets/BG/Download bg.png" alt="image 2" >
-    </a>
+      <!-- Buttons -->
+      <div class="download-buttons">
+        <a href="#" class="button mouse">PC / Mac<br>AVAILABLE NOW</a>
+        <a href="#" class="button mouse">Nintendo Switch<br>AVAILABLE NOW</a>
+        <a href="#" class="button mouse">PS4<br>AVAILABLE NOW</a>
+      </div>
+    </div>
+  </section>
+  
 
-  </aside>
 
 
 </main>
@@ -216,10 +240,16 @@
   <script src="js/index-gsap.js"></script>
   <!-- video -->
   <script src="js/video.js"></script>
+  <!-- features -->
+  <script src="js/index-features.js"></script>
+  <!-- tweenmax and Jquery liberary -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- mouse -->
   <script src="js/mouse.js"></script>
   <!-- loading js -->
   <script src="js/loading.js"></script>
+  <!--  -->
 
   
 

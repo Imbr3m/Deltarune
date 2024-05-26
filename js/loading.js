@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 // Disable scrolling initially
-// document.body.classList.add('no-scroll');
+document.body.classList.add('no-scroll');
 
 // Enable scrolling after 8 seconds
 gsap.to({}, { duration: 8, onComplete: () => {

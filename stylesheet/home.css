@@ -200,27 +200,73 @@ nav {
 /* Video CSS END */
 
 
-/* About section */
-.about {
-  /* background: url("Assets/BG/battle-bg.gif");
-  background-size: cover;
-  background-position: top; */
-  margin: 20vh 0;
-  height: 70vh;
+/* blasters */
+.blaster-container {
+
+  position: absolute;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blaster {
+  position: absolute;
+  width: 250px;
+  height: auto;
+
+
+  mix-blend-mode: screen;
+
+  z-index: 20;
+}
+
+#blaster1 {
+  transform: translateY(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* About section */
+
+.about-wrapper {
+  margin-top: 25vh;
+  position: relative;
+  width: 120%;
+  height: 100vh;
+  margin-left: -10%; /* Adjust to center the rotated element */
+  overflow: hidden; /* Hide overflowing content */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-.about .square {
-  position: absolute;
-  height: 5vh;
-  width: 5vh;
-  border: #ffffff 2px solid;
+
+
+
+.about {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(0,0,0,1) 100%);
+  position: relative;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
+
 .about .text {
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,6 +274,7 @@ nav {
   height: 100%;
 }
 .about .text p {
+  color: black;
   font-size: 1.6rem;
   width: 80%;
 }
@@ -239,9 +286,90 @@ nav {
   align-items: center;
 }
 .img-container img {
-  height: 100%;
+  height: 80%;
   width: auto;
 }
+
+
+
+
+/* /* FEATURING */
+.featuring {
+  margin-top: 50vh;
+  width: 100%;
+  height: 80vh;
+  background: gray;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover; /* Ensure background covers the entire section */
+  background-position: center; /* Center the background */
+}
+
+.featuring .boxing {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuring .title {
+  font-size: 2rem;
+  color: white;
+  transform: translateY(-25vh);
+}
+
+.featuring .list {
+  text-align: justify;
+  list-style: disc;
+  margin: 0px 5vh;
+  height: auto;
+  width: 70%;
+  color: #fff;
+}
+
+
+
+/* arrows */
+.featuring .boxing .prev-arrow,
+.featuring .boxing .next-arrow {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the arrows to make them more visible */
+.featuring .boxing .prev-arrow {
+  margin-right: 20px; /* Add some space between the arrows and the list */
+}
+
+.featuring .boxing .next-arrow {
+  margin-left: 20px; /* Add some space between the arrows and the list */
+}
+
+/* CSS for highlighted list items */
+.highlighted {
+  color: red; /* Change the color to red */
+}
+/* feature end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* kris-susie running */
 .run {
@@ -257,14 +385,24 @@ nav {
   width: auto;
 }
 
-/* heart */
-.heart {
-  position: absolute;
-  height: 10vh;
-  width: 10vh;
-  background-color: blue;
-  
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .animation-container {
@@ -285,18 +423,19 @@ nav {
 .animation-container .text1 {
   position: relative;
   z-index: 1;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -20%);
 }
 .animation-container .text2 {
   position: relative;
   z-index: 1;
-  transform: translate(50%, 0);
+  transform: translate(50%, -20%);
 }
 .animation-container .text3 {
   position: relative;
   z-index: 1;
 }
 .animation-container .text4 {
+  transform: translateX(100%);
   position: relative;
   z-index: 1;
 }
@@ -310,113 +449,94 @@ nav {
   z-index: 1;
 }
 
-.gallery {
-  position: relative;
-  background-color: rgba(170, 47, 47, 0.435);
-  width: 100%;
+.animation-container .frame {
+  position: absolute;
+}
 
+.animation-container .frame #image1 {
+  opacity: 0;
+  width: 50vw;
+  height: auto;
+
+  transform: translate(50%, 500%);
+}
+.animation-container .frame #image2 {
+  opacity: 0;
+
+  width: 50vw;
+  height: auto;
+
+  transform: translate(50%, 700%);
+}
+.animation-container .frame #image3 {
+  opacity: 0;
+
+  width: 35vw;
+  height: auto;
+
+  transform: translate(70%,700%);
+}
+
+.animation-container .frame #image4 {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(670%);
+}
+
+
+
+
+
+/* DOWNLOAD SECTION */
+.download-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
-  z-index: 0;
-
 }
-.gallery .frame {
+
+/* Background */
+.download-section .background {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-}
-
-.gallery .frame #image1 {
-  width: auto;
-  height: 50vh;
-  transform: translate(40%, -1000%);
-}
-.gallery .frame #image2 {
-  width: auto;
-  height: 50vh;
-  transform: translate(40%, -900%);
-}
-.gallery .frame #image3 {
-  
-  width: auto;
-  height: 50vh;
-  transform: translate(90%, -800%);
-}
-.gallery .frame #image4 {
-  
-  height: auto;
-  width: 100%;
-  transform: translate(0, -200%);
+  object-fit: cover;
+  position: absolute;
   z-index: -1;
 }
 
+/* Buttons */
+.download-buttons {
+  display: flex;
+  gap: 1rem;
 
+  position: relative;
+  transform: translateY(150%);
+}
 
-/* FEATURING */
-.featuring {
-  width: 100%;
-  height: 80vh;
-  background-color: white;
-
+.download-buttons .button {
+  padding: 1rem;
+  background: #00000055;
+  color: #ffffff;
+  border: white solid 3px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
 }
 
-.featuring .boxing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.download-buttons .button:hover {
+  transform: scale(1.05);
 }
 
-
-
-.featuring .title {
-  font-size: 2rem;
+.download-buttons .button:active {
+  transform: scale(0.95);
 }
-
-.featuring .boxing .gallery-container {
-  background-color: rebeccapurple;
-  width: 50%;
-  height: 50%;
-}
-
-.featuring .list {
-  text-align: right;
-  list-style: none;
-  margin: 0px 5vh;
-  height: auto;
-  width: 70%;
-  color: #000000;
-}
-
-
-
-
-.download {
-  position: absolute;
-  transform: translate(0%, 50%);
-  width: 100%;
-  background-color: blue;
-  object-fit: cover;
-  object-position: bottom;
-  
-  height: 70%;
-}
-
-
-
-
-
 
 
 p {
