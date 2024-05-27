@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // gallery gsap
+  // animation gallery gsap
   // text1
   gsap.from(".animation-container .text1", {
     opacity: 0,
@@ -331,8 +331,8 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 2,
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "350vh center",
-      end: "450vh center",
+      start: "6.45% center",
+      end: "8.29% center",
     }
   })
   // text2
@@ -342,8 +342,8 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 2,
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "450vh center",
-      end: "550vh center",
+      start: "8.29% center",
+      end: "10.37% center",
     }
   })
   // FIGHT BUTTON
@@ -352,8 +352,8 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 10,
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "800vh center",
-      end: "1000vh center",
+      start: "14.75% center",
+      end: "18.45% center",
       scrub: 1,   
     }
   })
@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function() {
     scale: "1.05",
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "900vh center",
+      start: "16.59% center",
       end: "bottom center",
       scrub: true,   
       pin: ".fight",
@@ -373,76 +373,36 @@ document.addEventListener("DOMContentLoaded", function() {
     x: "-90%",
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "1400vh center",
-      end: "1500vh center",
+      start: "25.81% center",
+      end: "27.59% center",
       scrub: 1,   
     }
   })
   // text3
-  gsap.from(".animation-container .text3", {
-    opacity: 0,
-    // y: "10vh",
+  gsap.to(".animation-container .text3", {
+    opacity: 1,
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "3800vh center",
-      end: "3900vh center",
+      start: "70% center",
+      end: "73% center",
       scrub: 1,
-      
     }
   })
-  gsap.to(".animation-container .text3", {
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "1100vh center",
-      end: "bottom center",
-      scrub: true,   
-      pin: ".text3",
-      pinSpacing: false,
-    }
-  })
-  gsap.to(".animation-container .text3", {
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "4900vh center",
-      end: "bottom center",
-      scrub: true,   
-    }
-  })
+
+
   // text4
-  gsap.to(".animation-container .text4", {
-    opacity: 0,
-  })
   gsap.from(".animation-container .text4", {
     opacity: 0,
     y: "10vh",
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "4000vh center",
-      end: "4100vh center",
+      start: "73.15% center",
+      end: "75% center",
       scrub: 1,
+      markers: true,
     }
   })
-  gsap.from(".animation-container .text4", {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "4400vh center",
-      end: "4500vh center",
-      scrub: 1,
-      
-    }
-  })
-  gsap.to(".animation-container .text4", {
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "1340vh center",
-      end: "bottom center",
-      scrub: true,   
-      pin: ".text4",
-      pinSpacing: false,
-    }
-  })
-  // MERCy BUTTON
+  // MERCY BUTTON
   gsap.set(".animation-container .mercy", {
     opacity: 1,
   });
@@ -451,33 +411,20 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 10,
     scrollTrigger: {
       trigger: ".animation-container",
-      start: "4600vh center",
-      end: "4700vh center",
-      scrub: 1,   
-      
-    }
-  });
-  // pin
-  gsap.to(".animation-container .mercy", {
-    scale: "1.05",
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "1544vh center",
-      end: "bottom center",
-      scrub: true,   
-      pin: ".mercy",
-      pinSpacing: false,
-    }
-  });
-  gsap.to(".animation-container .mercy", {
-    x: "90%",
-    scrollTrigger: {
-      trigger: ".animation-container",
-      start: "1400vh center",
-      end: "1500vh center",
+      start: "85.19% center",
+      end: "87.03% center",
       scrub: 1,   
     }
   });
+  gsap.to(".animation-container .mercy", {
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "25.81% center",
+      end: "27.59% center",
+      scrub: 1,   
+    }
+  });
+
 
   // IMAGES
   gsap.to("#image1", 

@@ -366,24 +366,43 @@ nav {
   z-index: 1;
   transform: translate(50%, -20%);
 }
-.animation-container .text3 {
-  position: relative;
+.animation-container .fight .text3 {
+  transform: translateX(25vw);
+  opacity: 0;
+
+  position: absolute;
   z-index: 1;
 }
-.animation-container .text4 {
-  transform: translateX(100%);
-  position: relative;
+.animation-container .fight .text4 {
+  transform: translateX(50vw);
+  width: 50vh;
+
+  opacity: 1;
+
+  position: absolute;
   z-index: 1;
 }
 .animation-container .fight {
   position: relative;
   width: 50vh;
   z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .animation-container .mercy {
+  transform: translateX(50vw);
+
+  position: absolute;
   width: 50vh;
-  z-index: 1;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/* images */
 .animation-container .frame {
   position: absolute;
 }
