@@ -448,7 +448,6 @@ document.addEventListener("DOMContentLoaded", function() {
         start: "start-=30% center",  
         end: "center center", 
         scrub: true,   
-        markers: true,       
       }
     });
   gsap.to("#image2", 
