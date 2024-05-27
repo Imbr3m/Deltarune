@@ -68,9 +68,14 @@ nav {
   align-items: center;
   font-size: 1.1rem;
 }
+.nav-btn a:hover {
+  color: rgb(143, 29, 0);
+}
 .nav-btn a{
   color: white;
   text-decoration: none;
+
+  transition: all 1s;
 }
 .nav-btn span a{
   font-family: deltarune2;
@@ -374,13 +379,9 @@ nav {
   z-index: 1;
 }
 .animation-container .fight .text4 {
-  transform: translateX(50vw);
-  width: 50vh;
-
   opacity: 1;
-
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 .animation-container .fight {
   position: relative;

@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // text4
-  gsap.from(".animation-container .text4", {
+  gsap.from(".animation-container .mercy .text4", {
     opacity: 0,
     y: "10vh",
     scrollTrigger: {
@@ -399,29 +399,42 @@ document.addEventListener("DOMContentLoaded", function() {
       start: "73.15% center",
       end: "75% center",
       scrub: 1,
-      markers: true,
     }
   })
+  gsap.to(".animation-container .mercy .text4 h1", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".animation-container",
+      start: "85.19% center",
+      end: "87.03% center",
+      scrub: 1,  
+      
+    }
+  })
+
   // MERCY BUTTON
-  gsap.set(".animation-container .mercy", {
+  gsap.set(".animation-container .mercy #mercy", {
     opacity: 1,
   });
-  gsap.from(".animation-container .mercy", {
+  gsap.from(".animation-container .mercy #mercy", {
     opacity: 0,
     duration: 10,
     scrollTrigger: {
       trigger: ".animation-container",
       start: "85.19% center",
       end: "87.03% center",
-      scrub: 1,   
+      scrub: 1,  
+      
     }
   });
-  gsap.to(".animation-container .mercy", {
+  gsap.to(".animation-container .mercy #mercy", {
     scrollTrigger: {
       trigger: ".animation-container",
       start: "25.81% center",
       end: "27.59% center",
       scrub: 1,   
+      
+
     }
   });
 
@@ -432,9 +445,10 @@ document.addEventListener("DOMContentLoaded", function() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#image1",
-        start: "start center",  
+        start: "start-=30% center",  
         end: "center center", 
-        scrub: true,          
+        scrub: true,   
+        markers: true,       
       }
     });
   gsap.to("#image2", 
@@ -442,7 +456,7 @@ document.addEventListener("DOMContentLoaded", function() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#image2",
-        start: "start center",  
+        start: "start-=30% center",  
         end: "center center", 
         scrub: true,         
       }
@@ -452,7 +466,7 @@ document.addEventListener("DOMContentLoaded", function() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#image3",
-        start: "start center",  
+        start: "start-=30% center",  
         end: "center center", 
         scrub: true,       
       }
