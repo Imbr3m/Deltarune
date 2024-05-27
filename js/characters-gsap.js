@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animate line  from left to right
     gsap.from('.line', {
+        delay: 8,
         x: "-300vh",
         duration: 1,
     });
